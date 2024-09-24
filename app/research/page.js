@@ -26,6 +26,7 @@ export default function Research() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
 
   // desestructuración state
   const { items, search, year, category, papersToShow } = state;
