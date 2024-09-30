@@ -29,7 +29,7 @@ export default function FilterDate( {year, changeYear, items} ) {
   let years = getYears(items);
 
   return (
-   <>
+    <div className="container_select_label w-1/2 lg:w-full">
     <Label htmlFor="year">{t("publications.filter.fieldTitle3")}</Label>
     <Select
       className="filter"
@@ -58,6 +58,6 @@ export default function FilterDate( {year, changeYear, items} ) {
         ))}
       </SelectContent>
     </Select>
-  </>
+  </div>
   )
 }

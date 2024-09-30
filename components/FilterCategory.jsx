@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 export default function FilterCategory( {category, changeCategory, categories } ) {
   const { t } = useTranslation();
   return (
-    <>
+    <div className="container_select_label w-1/2 lg:w-full">
     <Label htmlFor="search">{t("publications.filter.fieldTitle2")}</Label>
           <Select
             className="filter flex flex-col"
@@ -40,6 +40,6 @@ export default function FilterCategory( {category, changeCategory, categories } 
               ))}
             </SelectContent>
           </Select>
-      </>
+      </div>
   )
 }

@@ -28,7 +28,7 @@ const CardVariants = cva(
           "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
         course: "bg-purple-50",
         publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "p-0 bg-snow border border-input shadow-sm hover:scale-[101%]",
+        team: "p-0 bg-snow border border-input shadow-sm hover:bg-snow hover:scale-[101%]",
         tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
       },
       direction: {
@@ -90,7 +90,7 @@ const Card = React.forwardRef(
       <article className={cn(CardVariants({ variant, direction, className }))}>
         {/* card header */}
         {(date || category) && (
-          <header className="w-full flex gap-4 justify-start">
+          <header className="w-full flex gap-2 justify-start">
             <Badge variant="outline" size="lg">
               {date}
             </Badge>
@@ -186,7 +186,7 @@ const Card = React.forwardRef(
     // PUBLICATIONS - ok
     const publicationCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="w-full flex gap-4 justify-start">
+        <header className="w-full flex gap-3 justify-start">
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
@@ -195,10 +195,10 @@ const Card = React.forwardRef(
           </Badge>
         </header>
         <div className={cardBodyClasses}>
-          <Heading level="h3">
+          <Heading level="h4">
             <i>{title}</i>
           </Heading>
-          <Heading level="h5">{author}</Heading>
+          <Text level="p">{author}</Text>
         </div>
         <footer className={cardFooterClasses}>
           {doi ? (
@@ -218,7 +218,7 @@ const Card = React.forwardRef(
     const teamCard = (
       <article
         className={
-          cn(CardVariants({ variant, direction, className })) + " mx-auto w-60"
+          cn(CardVariants({ variant, direction, className })) + " mx-auto w-60 gap-1"
         }
       >
         {img && (
@@ -230,10 +230,10 @@ const Card = React.forwardRef(
         )}
         {(name || position || description || email) && (
           <div className="p-4 h-full w-full flex flex-col justify-between items-center">
-            <Heading level="h3" className={"text-inherit text-center"}>
-              {name}
+            <Heading level="h5" className={"text-inherit text-center"}>
+              {name} {position}
             </Heading>
-            <Heading level="h5">{position}</Heading>
+            
             {email && <Text>{email}</Text>}
           </div>
         )}

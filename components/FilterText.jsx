@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 export default function FilterText( {search, changeSearch} ) {
   const { t } = useTranslation();
   return (
-    <div className="filter">
+    <div className="filter flex flex-wrap lg:w-1/3">
     <Label htmlFor="search">{t("publications.filter.fieldTitle1")}</Label>
     <Input
       className="w-full"
