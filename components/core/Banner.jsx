@@ -14,7 +14,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "standard_padding  md:min-h-[90dvh]",
+      "narrow_padding  md:min-h-[90dvh]",
       "text-snow",
       "bg-main bg-cover bg-center",
       "flex gap-8 justify-around items-center",
@@ -71,7 +71,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("hidden md:block", className)}>
     <img
       className="object-contain"
-      src="assets/logos/eunomia_icon_light.svg"
+      src="placeholder.jpg"
       alt="icon"
     />
   </div>
