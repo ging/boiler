@@ -8,7 +8,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 import Heading from "../ui/Heading";
-import { Badge } from "../ui/badge";
+import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import {
