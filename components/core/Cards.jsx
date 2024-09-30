@@ -19,7 +19,7 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  " min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       variant: {
@@ -83,6 +83,7 @@ const Card = React.forwardRef(
       github,
       buttonText,
       cardType,
+      role
     },
     ref
   ) => {
@@ -218,7 +219,7 @@ const Card = React.forwardRef(
     const teamCard = (
       <article
         className={
-          cn(CardVariants({ variant, direction, className })) + " mx-auto w-60 gap-1"
+          cn(CardVariants({ variant, direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
         }
       >
         {img && (
@@ -229,12 +230,12 @@ const Card = React.forwardRef(
           />
         )}
         {(name || position || description || email) && (
-          <div className="p-4 h-full w-full flex flex-col justify-between items-center">
+          <div className="p-4 h-full w-full flex flex-col justify-start items-center mb-auto">
             <Heading level="h5" className={"text-inherit text-center"}>
               {name} {position}
             </Heading>
-            
-            {email && <Text>{email}</Text>}
+            <Text type="short-p">{role}</Text>
+           {email && <Text className={"font-semibold"}>{email}</Text>}
           </div>
         )}
         {/* {( email &&    

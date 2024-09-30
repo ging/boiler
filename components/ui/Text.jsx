@@ -19,6 +19,9 @@ const Text = ({ type = "p", children, className }) => {
     case "small":
       Component = "small";
       break;
+      case "short-p":
+        Component = "p";
+        break;
     default:
       Component = "p"; // Por defecto, usar h1 si no se especifica nivel válido
       break;
@@ -29,8 +32,9 @@ const Text = ({ type = "p", children, className }) => {
     "font-body",
     {/*"text-balance"*/},
     {
-      "text-base max-w-[66ch] text-balance": type === "p",
+      "text-base max-w-[75ch] text-pretty": type === "p",
       "text-sm": type === "small",
+      "text-base max-w-[66ch]": type === "short-p",
     },
     className
   ])

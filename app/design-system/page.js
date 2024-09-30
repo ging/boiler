@@ -35,7 +35,7 @@ export default function DesignSystem(props) {
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
-      <Heading level="h1">Sistema de diseño</Heading>
+      <Heading level="h2">Sistema de diseño</Heading>
 
       <Heading level="h3">Botones</Heading>
       {/* Variant */}
@@ -409,7 +409,7 @@ export default function DesignSystem(props) {
       <Heading level="h3" className={"border-t-2 border-t-primary pt-2 mt-4"}>Jerarquías de textos</Heading>
 
 
-      <Heading level="h1">Títulos de 1er nivel</Heading>
+      <Heading level="h2">Títulos de 1er nivel</Heading>
       <Text type="p"></Text>
 
       <Heading level="h2">Títulos de 2o nivel</Heading>

@@ -28,9 +28,7 @@ export default function RootLayout({ children }) {
         <Header/>
         {isClient ? (
           <div className={ubuntu.className}>
-            <h1 className={ubuntu.className}></h1>
-            <h2 className={ubuntu.className}></h2>
-            <h3 className={ubuntu.className}></h3>
+          
             {children}
           </div>
         ) : null}

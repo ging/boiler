@@ -3,7 +3,7 @@
 export const es = {
     "nav":{
         "item1":"Home",
-        "item2":"El proyecto",
+        "item2":"Sobre [proyecto]",
         "item3":"Equipo",
         "item4":"Publicaciones",
         "item5":"Contacto",

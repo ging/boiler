@@ -45,6 +45,7 @@ export default function Team(props) {
             img={img}
             name={name}
             position={position}
+            role={translatedRole}
             center={center}
             email={email}
           ></Card>
@@ -57,8 +58,8 @@ export default function Team(props) {
     <main className={"team page_" + currentLang }>
       {/* <Header route={"/team"} />   */}
       <main className="standard_margin">
-        <Heading level="h1">{t("team.title")}</Heading>
-        <section className="w-fit mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <Heading level="h2">{t("team.title")}</Heading>
+        <section className="mx-auto xs:ml-0 flex flex-wrap xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 justify-start">
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>

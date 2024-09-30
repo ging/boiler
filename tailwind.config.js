@@ -22,7 +22,7 @@ module.exports = {
         'base': ['1rem', { lineHeight: '1.4' }], // body
 
         // con Hs creo que es mejor la verdad y así reservamos los tamañosde tw por si acaso
-        'h1': ['3rem', { lineHeight: '1.4em' }],
+        'h1': ['3rem', { lineHeight: '1.15' }],
         'h2': ['2.5rem', { lineHeight: '1.4' }],
         'h3': ['1.75rem', { lineHeight: '1.4' }],
         'h4': ['1.5rem', { lineHeight: '1.4' }],

@@ -87,7 +87,7 @@ export default function Research() {
   return (
     <div className={"research page_" + currentLang}>
       <div className="standard_margin" id="banner-publications">
-        <Heading level="h1">{t("publications.title")}</Heading>
+        <Heading level="h2">{t("publications.title")}</Heading>
         <Text type="p">
           Este apartado es una recopilación de las publicaciones del equipo de
           la UPM y de la UC3M. Las publicaciones de la UPM están centrados en el
