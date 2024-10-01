@@ -37,7 +37,7 @@ export default function Footer(props) {
         />
         <div className="text-white flex items-center">
           <EnvelopeClosedIcon className="mr-2 mb-0.5" />
-          <p className="text-white text-[14px]">
+          <p className="text-white text-[14px] flex gap-1">
             <b>{t("footer.email")} </b>responsable@upm.es
           </p>
         </div>
