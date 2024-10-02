@@ -66,16 +66,24 @@ export const en = {
     },
     "publications": {
         "title": "Publications",
+        "publicationCards": {
+            "categories": {
+                "article-journal": "Article Journal",
+                "paper-conference": "Paper Conference",
+                "book": "Book",
+                "chapter": "Chapter",
+
+            },
+        },
         "filter":{
             "fieldTitle1":"Search",
             "fieldTitle2":"Publication type",
             "fieldTitle3":"Year",
-            "fieldOpt1":"Journal Article",
+            "fieldOpt1":"Article Journal",
             "fieldOpt2":"Conference proceedings",
             "fieldOpt3":"Book",
             "fieldOpt4":"Chapter",
-            "fieldOpt5":"Document",
-            "fieldOpt6":"All",
+            "fieldOpt5":"All",
             "text":"Results"
         },
         "button": "Read publication", 

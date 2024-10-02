@@ -15,6 +15,11 @@ import Divider from "@/components/ui/divider";
 export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  // if (currentLang == "es") {
+  //   console.log("true, language true")
+  // } else {
+  //   console.log("false, language false")
+  // }
   const [state, setState] = useState({
     items: mypublications,
     search: "",
@@ -115,7 +120,8 @@ export default function Research() {
             .slice(0, papersToShow)
             .map(({ date, category, doi, author, title, journal }, ind) => {
               return (
-                <Card
+                <Card 
+                  currentLang={currentLang}
                   cardType={"publication"}
                   className={CardVariants({
                     variant: "publication",

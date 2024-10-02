@@ -70,13 +70,24 @@ export const es = {
     },
     "publications": {
         "title": "Publicaciones",
+        "publicationCards": {
+            "categories": {
+                "article-journal": "Artículo de revista",
+                "paper-conference": "Acta de congreso",
+                "book": "Libro",
+                "chapter": "Capítulo",
+              
+            },
+        },
         "filter":{
             "fieldTitle1":"Buscar",
             "fieldTitle2":"Tipo de publicación",
             "fieldTitle3":"Año",
-            "fieldOpt1":"Todo",
-            "fieldOpt2":"Artículos de revista",
-            "fieldOpt3":"Actas de congreso",
+            "fieldOpt1":"Artículos de revista",
+            "fieldOpt2":"Actas de congreso",
+            "fieldOpt3":"Libros",
+            "fieldOpt4":"Capítulos",
+            "fieldOpt5":"Todo",
             "text":"Resultados"
         },
         "button": "Leer publicación",

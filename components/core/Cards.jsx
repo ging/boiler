@@ -59,6 +59,50 @@ const renderTags = (tags) => {
     <Badge key={index}>{tag}</Badge> // Añade una key a cada Label
   ));
 };
+// currentLang
+// const translateCategory = (category, currentLang) => {
+//   switch (es) {
+//     case "Naranjas":
+//      // transformar article-journal en "Artículo de revista"
+//       break;
+  
+// }}
+
+// quitarle guión, añadir espaciado, mayúscula (Formateo)
+const renderCategory = (category) => {
+  if (!category) return null;
+  const categoryFormat = category.split('-') // cadena en un array de palabras
+  .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
+  .join(' '); // unir las palabras con espacio
+  return (
+    <Badge variant="outline" size="lg">{categoryFormat}</Badge>  
+  )
+};
+
+const translateCategory = (category, currentLang) => {
+  if (currentLang == "es") {
+    if (category == "article-journal") {
+      category = "artículo-revista";
+      console.log(category)
+      }
+    else if (category == "paper-conference") {
+      category = "acta-congreso";
+      console.log(category)
+      }
+    else if (category == "book") {
+      category = "libro";
+      console.log(category)
+      }
+    else if (category == "chapter") {
+      category = "capítulo";
+      console.log(category)
+      }
+  } else if (currentLang == "en") {
+    // transformar "artículo-revista" en article journal
+  }
+  return renderCategory(category)
+}
+
 
 const Card = React.forwardRef(
   (
@@ -83,7 +127,8 @@ const Card = React.forwardRef(
       github,
       buttonText,
       cardType,
-      role
+      role,
+      currentLang
     },
     ref
   ) => {
@@ -191,9 +236,9 @@ const Card = React.forwardRef(
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
-          <Badge variant="outline" size="lg">
-            {category}
-          </Badge>
+          {translateCategory(category, currentLang)}
+          
+       
         </header>
         <div className={cardBodyClasses}>
           <Heading level="h4">
@@ -206,7 +251,7 @@ const Card = React.forwardRef(
             <Button asChild variant="secondary" radius="rounded_md">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
                 Leer publicación
-                {/* {t("publications.button")} */}
+             
                 <ArrowRightIcon />
               </Link>
             </Button>

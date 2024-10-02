@@ -3365,7 +3365,7 @@ export const mypublications = [
   },
   {
     date: [1995, 5],
-    category: "document",
+    category: "article-journal",
     author:
       "Luc Léonard, Guy Leduc, David Frutos Escrig, Luis Díaz, Carlos Nieto, Juan Quemada, and Gualberto Rabay",
     title: "Belgian-Spanish Proposal for a Time Extended LOTOS",
