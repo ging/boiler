@@ -11,12 +11,12 @@ export const en = {
         "publicationstab": "Publications",
     },
     "front": {
-        "title": "Boiler by GING",
-        "description": "Boilerplate for investigation groups and other projects",
+        "title": "Boilerplate by GING",
+        "description": "Customizable website template for research groups and other projects. See documentation at {notion URL} to use the template.",
         "action-button": "About us",
         "section1Title": "Short description of the project",
         "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
-        "section1Subtitle": "Eunomia is based on:",
+        "section1Subtitle": "Project principles",
         "latestPublicationsTitle": "Latest publications",
         "latestPublicationsButton": "See all publications",
         "sectionHomeTitle": "A collaborative project between UC3M and UPM",
@@ -38,30 +38,45 @@ export const en = {
             },
         },
     },
-    "project": {
+    "about": {
         "Intro": {
             "sectionTitle": "Introduction",
-            "sectionBody": "(Estado del arte) According to Cisco’s Visual Networking Index (VNI), data traffic has been continuously growing since the introduction of the Internet. While in the past the average overall growth seen in the operators’ networks has been around 35%, this trend seems to keep increasing towards a 45% growth rate [Cisco2018]. Video streaming is still the dominating type of traffic nowadays, but other applications and services have appeared in the past years to stress networks even more, for example Machine-2-Machine (M2M) applications and Online Gaming, with 46% CAGR and 59% CAGR respectively. In parallel, mobile traffic (5G and Beyond-5G) is expected to play a key role in the use of telco infrastructure. Indeed, global mobile traffic is expected to grow twice as fast as IP traffic.",
-            "sectionHighlight": "“Frase destacada del texto de la introducción un poco más larga y tal”",
+            "sectionBody": "Vitae accumsan blandit platea hac sit efficitur bibendum. Nullam donec orci cubilia; ante feugiat ridiculus. Diam egestas tellus lectus rutrum ullamcorper fringilla aenean maximus. Aliquam tortor tincidunt platea auctor lorem. Semper varius elementum risus finibus tincidunt montes. Sit nunc purus ridiculus; velit sapien sodales. Fermentum platea nascetur odio quis iaculis dolor cras scelerisque. Phasellus quam venenatis; felis ligula sed est quis ex ante. Risus vehicula hac dictumst litora mus. Posuere per parturient litora eleifend pharetra ad lectus. Primis magna rutrum malesuada laoreet ipsum pulvinar praesent. Tortor egestas sit himenaeos lacinia a ultricies litora. Ultrices consequat nunc et curabitur, hendrerit id mattis feugiat condimentum. Rutrum platea odio lorem interdum tellus; penatibus ullamcorper. Cubilia placerat luctus fames pretium urna penatibus himenaeos himenaeos? Felis pellentesque quam aenean mattis penatibus per suspendisse.",
+            "sectionHighlight": "“This highlighted sentence serves to summarize or emphasize the most important points presented in the introduction.“",
         },
-        "Subprojects": {
-            "sectionTitle": "Subprojects",
-            "Subproject1": {
-                "Title": "Subproject 1",
-                "Subtitle": "Networking technologies",
-                "Body": "The group at UC3M has a long track record on different networking technologies including telco architecture, optical WDM systems, support for 5G/5G+ integration, and AI/ML-based operations for an intelligent control plane.",
-                "Button": "See UC3M Team"
+        "Goals": {
+            "sectionTitle": "Objetivos",
+            "Goal1": {
+                "GoalTitle": "Objetivo 1",
+                "GoalBody": "Porttitor ultricies magnis tincidunt nostra odio id. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
             },
-            "Subproject2": {
-                "Title": "Subproject 2",
-                "Subtitle": "Computing systems",
-                "Body": "The group at UPM has vast experience at implementing large computing systems both on premises and on the cloud focusing on big data and machine learning applications and both groups have experience at designing programmable network elements.",
-                "Button": "See UPM Team"
+            "Goal2": {
+                "GoalTitle": "Objetivo 2",
+                "GoalBody": " In pharetra efficitur, penatibus nascetur imperdiet mus torquent.Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae.",
+            },
+            "Goal3": {
+                "GoalTitle": "Objetivo 3",
+                "GoalBody": " Ultrices nunc commodo mi nascetti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos."
+            }
+        },
+        "Columns": {
+            "sectionTitle": "Content Title",
+            "Column1": {
+                "Title": "Content 1",
+                "Subtitle": "",
+                "Body": "Non cras ornare augue ultrices himenaeos consequat. Viverra viverra faucibus nullam metus congue est adipiscing. Volutpat consectetur ornare feugiat, potenti maximus hac pulvinar inceptos. Eros massa interdum tempus ligula mollis pulvinar dapibus phasellus fusce. Sit habitant pharetra, enim lobortis mollis potenti nullam varius. Aptent integer leo elementum est inceptos egestas facilisi porta maecenas.",
+                "Button": "Action Button"
+            },
+            "Column2": {
+                "Title": "Content 2",
+                "Subtitle": "",
+                "Body": "Non cras ornare augue ultrices himenaeos consequat. Viverra viverra faucibus nullam metus congue est adipiscing. Volutpat consectetur ornare feugiat, potenti maximus hac pulvinar inceptos. Eros massa interdum tempus ligula mollis pulvinar dapibus phasellus fusce. Sit habitant pharetra, enim lobortis mollis potenti nullam varius.",
+                "Button": "Action Button"
             }
         },
         "Impact": {
             "sectionTitle": "Impact",
-            "sectionBody": "Contribución a la generación de conocimiento: Cómo el proyecto ayudará a avanzar en las áreas de redes y sistemas de computación. Relevancia estratégica: Alineación con estrategias nacionales y europeas como España Digital 2026 y Horizon Europe.",
+            "sectionBody": "Porttitor ultricies magnis tincidunt nostra odio id. In pharetra efficitur, penatibus nascetur imperdiet mus torquent. Congue mauris euismod lorem vehicula tellus fringilla condimentum tincidunt diam. At vel semper mollis; semper vivamus sociosqu ex. Ultrices nunc commodo mi nascetur egestas neque potenti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos inceptos suspendisse cubilia urna? Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
         }
     },
     "publications": {
@@ -126,9 +141,14 @@ export const en = {
     "contact": {
         "title": "Contact",
         "title2": "Any questions? Contact us. ",
-        "title3": "Where are we?",
-        "listTitle2":"Phone",
-        "body": "Do you want to get in touch with us for any consultation or colaborations ( course, project or publication) ? In the CyberAula group we are open to work together with other groups or educational institutions, as well as the participation in european or national projects as long as they are related to our main lines of action. Ask and we'll be glad to establish contact for possible colaborations.",
+    
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "email":" Email address",
+        "phone":" Telephone",
+        "location":" Location",
+        "direction1": "Faculty",
+        "direction2": "Direction",
+        "direction3": "Zip Code, city"
     },
     "footer": {
         "title1":"Sections",

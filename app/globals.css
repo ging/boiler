@@ -47,6 +47,12 @@
 .narrow_padding {
   @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10;
 }
+.standard_padding-y {
+  @apply py-6 sm:py-6 md:py-8 lg:py-12 
+}
+.padding_card_highlight {
+  @apply pt-4 pb-4 px-6 sm:p-4 md:pb-6 lg:pb-8 lg:pt-8;
+}
 
 
 /*GAPS*/

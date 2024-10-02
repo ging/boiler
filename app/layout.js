@@ -1,6 +1,6 @@
 "use client";
 
-import { Source_Sans_3, Ubuntu } from "next/font/google";
+import { Source_Sans_3, Inter } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
 
@@ -11,7 +11,7 @@ import Header from "@/components/core/Header";
 import Footer from "@/components/core/Footer";
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"] , variable: "--font-sourceSans" });
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "700"] , variable: "--font-ubuntu" });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] , variable: "--font-inter" });
 
 export default function RootLayout({ children }) {
   //disable SSR whole project, this will make the project to be rendered only on client side
@@ -23,14 +23,13 @@ export default function RootLayout({ children }) {
 
   return (
   
-      <html className={` ${sourceSans.variable} ${ubuntu.variable} `}> 
+      <html className={` ${sourceSans.variable} ${inter.variable} `}> 
       <body>
         <Header/>
         {isClient ? (
-          <div className={ubuntu.className}>
-          
+          <div>
             {children}
-          </div>
+            </div>
         ) : null}
         <Footer />
       </body>

@@ -48,7 +48,7 @@ BannerTitle.displayName = "BannerTitle";
 const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
     <Text
     ref={ref}
-    level="p"
+    level="short-p"
     className= {cn("text-snow mb-4", className)}
     {...props} />
     ))

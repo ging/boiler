@@ -66,13 +66,6 @@ export default function Projects() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-
-        {/* <Image
-          fit="cover"
-          src="placeholder.jpg"
-          alt="Descripción de la imagen"
-          className={"h-full hidden md:flex"}
-        /> */}
         <Img
           src="placeholder.jpg"
           alt="Descripción de la imagen"

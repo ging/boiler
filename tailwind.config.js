@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "ubuntu": ['var(--font-ubuntu)', 'sans-serif'],
+        "inter": ['var(--font-inter)', 'sans-serif'],
         "sourceSans": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
@@ -90,12 +90,12 @@ module.exports = {
   plugins: [
     plugin(function({ addBase, theme }) {
       addBase({
-        'h1': { fontFamily: theme('fontFamily.ubuntu') },
-        'h2': { fontFamily: theme('fontFamily.ubuntu') },
-        'h3': { fontFamily: theme('fontFamily.ubuntu') },
-        'h4': { fontFamily: theme('fontFamily.ubuntu') },
-        'h5': { fontFamily: theme('fontFamily.ubuntu') },
-        'h6': { fontFamily: theme('fontFamily.ubuntu') },
+        'h1': { fontFamily: theme('fontFamily.inter') },
+        'h2': { fontFamily: theme('fontFamily.inter') },
+        'h3': { fontFamily: theme('fontFamily.inter') },
+        'h4': { fontFamily: theme('fontFamily.inter') },
+        'h5': { fontFamily: theme('fontFamily.inter') },
+        'h6': { fontFamily: theme('fontFamily.inter') },
         'p': { fontFamily: theme('fontFamily.sourceSans') },
         'a': { fontFamily: theme('fontFamily.sourceSans') },
         'button': { fontFamily: theme('fontFamily.sourceSans') },
