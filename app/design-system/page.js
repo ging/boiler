@@ -215,6 +215,8 @@ export default function DesignSystem(props) {
           badge outline
         </Badge>
         </div>
+
+        {/* badge sizes */}
         <Heading level="h5">Size</Heading>
         <div className="flex flex-wrap gap-4 pb-8">
         <Badge
@@ -245,6 +247,9 @@ export default function DesignSystem(props) {
           badge sm
         </Badge>
       </div>
+
+
+      {/* cards */}
       <Heading level="h3">Cards</Heading>
       <section className="cards grid md:grid-cols-2 gap-4">
         {projects.map(
@@ -267,7 +272,6 @@ export default function DesignSystem(props) {
               <Card
                 key={id}
                 className={CardVariants({
-                  variant: "",
                 })}
                 date={date}
                 title={title}
@@ -288,7 +292,6 @@ export default function DesignSystem(props) {
         <Card
           cardType={"project"}
           className={CardVariants({
-            variant: "project",
           })}
           date={"fecha"}
           title={
@@ -311,7 +314,6 @@ export default function DesignSystem(props) {
         <Card
           cardType={"course"}
           className={CardVariants({
-            variant: "course",
           })}
           date={"2023"}
           title={"Desarrollo de aplicaciones con React y React Native"}
@@ -327,7 +329,6 @@ export default function DesignSystem(props) {
         <Card
           cardType={"publication"}
           className={CardVariants({
-            variant: "publication",
           })}
           date={"2024"}
           title={
@@ -345,7 +346,6 @@ export default function DesignSystem(props) {
         <Card
           cardType={"team"}
           className={CardVariants({
-            variant: "team",
           })}
           img={"/assets/img/courses/fondo-cursos.png"}
           name={"Nombre Apellidos"}
@@ -356,7 +356,6 @@ export default function DesignSystem(props) {
         <Card
           cardType={"tool"}
           className={CardVariants({
-            variant: "tool",
           })}
           img={"/assets/img/courses/fondo-cursos.png"}
           title={"Card de herramienta"}
@@ -364,6 +363,27 @@ export default function DesignSystem(props) {
           route={"https://github.com/agordillo/RESCORM"}
           github={"https://github.com/agordillo/RESCORM"}
         ></Card>
+
+
+
+
+        <Card
+          cardType={"team"} 
+          className={CardVariants({  
+          })}
+          date={"2024"}
+          name={
+            "Nombre Apellidos"
+          }
+          position={
+            "Eadasdasde"
+          }
+          tags={"Database, Learning, Remote, Education"}  // Tags separados por comas
+          category={"article-journal"}  // Categoría, será traducida a "artículo de revista"
+          img="placeholder.jpg"  // URL de la imagen
+          // svg={`<svg width="100" height="100"><circle cx="50" cy="50" r="40" fill="blue" /></svg>`} // Código SVG
+        />
+
       </section>
       <section>
         <Heading level="h3" className={"mt-12"}>
@@ -387,7 +407,6 @@ export default function DesignSystem(props) {
                 key={index}
                 cardType={"project"}
                 className={CardVariants({
-                  variant: "publication",
                 })}
                 date={date}
                 category={category}

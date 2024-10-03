@@ -2,9 +2,9 @@
 
 import React from "react";
 import clsx from "clsx";
-import { Badge } from "../ui/badge";
+import { Badge } from "./badge"; // Importamos el Badge y sus variantes
 
-const Img = ({
+const Image = ({
   fit = "cover",
   src,
   alt = "",
@@ -12,21 +12,17 @@ const Img = ({
   layout = "top-right",
   hasBadge = false,
   badgeVariant = "",
-  badgeSize = "",
-  isSvg = false, // Nuevo prop para detectar SVG
-  svgCode = "",  // SVG en formato de código
+  badgeSize = "",      
 }) => {
   const imageContainerClasses = clsx(
-    // "relative flex w-full h-full",
-    "relative flex w-full",
+    "relative flex w-full h-full",
     className 
   );
-
   const imageClasses = clsx(
-    "w-full h-full flex items-center justify-center", 
+    "w-full h-full", // La imagen ocupará todo el contenedor
     {
-      "object-cover": fit === "cover",
-      "object-contain": fit === "contain",
+      "object-cover": fit === "cover", // Uso de object-cover para cubrir el contenedor
+      "object-contain": fit === "contain", // Uso de object-contain para mantener la relación de aspecto
     }
   );
 
@@ -43,14 +39,11 @@ const Img = ({
 
   return (
     <div className={imageContainerClasses}>
-      {isSvg ? (
-        <div
-          className={imageClasses}
-          dangerouslySetInnerHTML={{ __html: svgCode }} // Renderizamos SVG
-        />
-      ) : (
-        <img src={src} alt={alt} className={"h-fit w-fit"} />
-      )}
+      <img
+        src={src}
+        alt={alt}
+        className={imageClasses} // Limitar el tamaño
+      />
       {hasBadge && (
         <Badge className={badgeLayout} variant={badgeVariant} size={badgeSize}>
           Hola
@@ -60,4 +53,5 @@ const Img = ({
   );
 };
 
-export default Img;
+
+export default Image;

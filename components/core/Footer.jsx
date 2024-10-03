@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { routes } from "@/constants/routes";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import Image from "../ui/image";
+import Image from "../ui/image-old";
 
 export default function Footer(props) {
   const { t } = useTranslation();

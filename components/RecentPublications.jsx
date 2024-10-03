@@ -32,7 +32,7 @@ export default function RecentPublications(props) {
           .map(({ doi, title, author, date, category }, index) => (
             <Card
               cardType={"publication"}
-              className={CardVariants({ variant: "publication" })}
+              className={CardVariants({})}
               key={doi || index} // Usar DOI si está disponible, o el índice como fallback
               date={date}
               title={title}
