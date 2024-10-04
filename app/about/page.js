@@ -11,8 +11,7 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 
 export default function About() {
   // const [projects, setProjects] = useState(myprojectCards);
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
+
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   useEffect(() => {
