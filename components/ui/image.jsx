@@ -26,7 +26,7 @@ const Image = ({
     "w-full h-full flex items-center justify-center", 
     {
       "object-cover": fit === "cover",
-      "object-contain": fit === "contain",
+      "object-contain justify-start": fit === "contain",
     }
   );
 

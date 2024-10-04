@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import { Card, CardVariants } from "@/components/core/CustomCards";
+import { Card, CardVariants } from "@/components/core/Cards";
 import { CardStackIcon } from "@radix-ui/react-icons";
 
 

@@ -45,17 +45,17 @@ export const en = {
             "sectionHighlight": "“This highlighted sentence serves to summarize or emphasize the most important points presented in the introduction.“",
         },
         "Goals": {
-            "sectionTitle": "Objetivos",
+            "sectionTitle": "Goals",
             "Goal1": {
-                "GoalTitle": "Objetivo 1",
+                "GoalTitle": "Goal 1",
                 "GoalBody": "Porttitor ultricies magnis tincidunt nostra odio id. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
             },
             "Goal2": {
-                "GoalTitle": "Objetivo 2",
+                "GoalTitle": "Goal 2",
                 "GoalBody": " In pharetra efficitur, penatibus nascetur imperdiet mus torquent.Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae.",
             },
             "Goal3": {
-                "GoalTitle": "Objetivo 3",
+                "GoalTitle": "Goal 3",
                 "GoalBody": " Ultrices nunc commodo mi nascetti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos."
             }
         },

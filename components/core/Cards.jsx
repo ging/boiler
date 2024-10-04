@@ -48,17 +48,9 @@ const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
   return tagsArray.map((tag, index) => (
-    <Badge key={index}>{tag}</Badge> // Añade una key a cada Label
+    <Badge key={index} variant="default">{tag}</Badge> // Añade una key a cada Label
   ));
 };
-// currentLang
-// const translateCategory = (category, currentLang) => {
-//   switch (es) {
-//     case "Naranjas":
-//      // transformar article-journal en "Artículo de revista"
-//       break;
-  
-// }}
 
 // quitarle guión, añadir espaciado, mayúscula (Formateo)
 const renderCategory = (category) => {
@@ -236,7 +228,7 @@ const Card = React.forwardRef(
 
     // PUBLICATIONS - ok
     const publicationCard = (
-      <article className={cn(CardVariants({ direction, className }))}>
+      <article className={cn(CardVariants({ direction, className })+ " bg-white")}>
         <header className="w-full flex gap-3 justify-start">
           <Badge variant="outline" size="lg">
             {date}
@@ -269,7 +261,7 @@ const Card = React.forwardRef(
     const teamCard = (
       <article
         className={
-          cn(CardVariants({direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
+          cn(CardVariants({direction, className })) + " mx-auto xs:mx-0 w-60 gap-1 bg-white"
         }
       >
         {(img || svg) && (

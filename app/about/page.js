@@ -76,7 +76,7 @@ export default function About() {
           {t("about.Columns.sectionTitle")}
         </Heading>
         <div className="flex flex-col sm:flex-row subprojects_container gap-0 sm:gap-16">
-          <div className="standard_margin-l subproject text-ffdGreen-300 basis-6/12  border-2 sm:border-4 border-solid border-transparent border-t-ffdGreen-400">
+          <div className="standard_margin-l pb-6 sm:pb-0 subproject text-ffdGreen-300 basis-6/12  border-2 sm:border-4 border-solid border-transparent border-t-ffdGreen-400">
           <Heading level="h5" className="mb-1">
               {t("about.Columns.Column1.Title")}
             </Heading>

@@ -17,7 +17,7 @@ export const es = {
         "description": "Plantilla personalizable de sitios web para grupos de investigación y otros proyectos. Puedes consultar la documentación en {notion URL} para empezar a usarla.",
         "action-button": "Sobre proyecto",
         "section1Title": "Sobre el proyecto",
-        "section1Description": "Para el proyecto de Eunomia, se desarrollarán soluciones técnicas, estándares y herramientas abiertas que permitan la compartición de datos de manera segura, garantizando la soberanía y confianza de los usuarios. El proyecto incluye la implementación de tecnologías FIWARE y otros estándares para facilitar la interoperabilidad y la gobernanza de datos. También se proporcionarán tutoriales y soporte para que cualquier usuario pueda experimentar con estas tecnologías.",
+        "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
         "section1Subtitle": "Principios del proyecto",
         "latestPublicationsTitle": "Últimas publicaciones",
         "latestPublicationsButton": "Ver todas las publicaciones",
@@ -46,24 +46,38 @@ export const es = {
             "sectionBody": "Vitae accumsan blandit platea hac sit efficitur bibendum. Nullam donec orci cubilia; ante feugiat ridiculus. Diam egestas tellus lectus rutrum ullamcorper fringilla aenean maximus. Aliquam tortor tincidunt platea auctor lorem. Semper varius elementum risus finibus tincidunt montes. Sit nunc purus ridiculus; velit sapien sodales. Fermentum platea nascetur odio quis iaculis dolor cras scelerisque. Phasellus quam venenatis; felis ligula sed est quis ex ante. Risus vehicula hac dictumst litora mus. Posuere per parturient litora eleifend pharetra ad lectus. Primis magna rutrum malesuada laoreet ipsum pulvinar praesent. Tortor egestas sit himenaeos lacinia a ultricies litora. Ultrices consequat nunc et curabitur, hendrerit id mattis feugiat condimentum. Rutrum platea odio lorem interdum tellus; penatibus ullamcorper. Cubilia placerat luctus fames pretium urna penatibus himenaeos himenaeos? Felis pellentesque quam aenean mattis penatibus per suspendisse.",
             "sectionHighlight": "“Frase destacada del texto de la introducción que tiene función de resumir o resaltar los puntos más importantes”",
         },
-      
+        "Goals": {
+            "sectionTitle": "Objetivos",
+            "Goal1": {
+                "GoalTitle": "Objetivo 1",
+                "GoalBody": "Porttitor ultricies magnis tincidunt nostra odio id. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
+            },
+            "Goal2": {
+                "GoalTitle": "Objetivo 2",
+                "GoalBody": " In pharetra efficitur, penatibus nascetur imperdiet mus torquent.Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae.",
+            },
+            "Goal3": {
+                "GoalTitle": "Objetivo 3",
+                "GoalBody": " Ultrices nunc commodo mi nascetti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos."
+            }
+        },
         "Columns": {
-            "sectionTitle": "Content Title",
+            "sectionTitle": "Título de contenido",
             "Column1": {
-                "Title": "Content 1",
+                "Title": "Contenido 1",
                 "Subtitle": "",
                 "Body": "Non cras ornare augue ultrices himenaeos consequat. Viverra viverra faucibus nullam metus congue est adipiscing. Volutpat consectetur ornare feugiat, potenti maximus hac pulvinar inceptos. Eros massa interdum tempus ligula mollis pulvinar dapibus phasellus fusce. Sit habitant pharetra, enim lobortis mollis potenti nullam varius. Aptent integer leo elementum est inceptos egestas facilisi porta maecenas.",
-                "Button": "Action Button"
+                "Button": "Botón de acción"
             },
             "Column2": {
-                "Title": "Content 2",
+                "Title": "Contenido 2",
                 "Subtitle": "",
                 "Body": "Non cras ornare augue ultrices himenaeos consequat. Viverra viverra faucibus nullam metus congue est adipiscing. Volutpat consectetur ornare feugiat, potenti maximus hac pulvinar inceptos. Eros massa interdum tempus ligula mollis pulvinar dapibus phasellus fusce. Sit habitant pharetra, enim lobortis mollis potenti nullam varius.",
-                "Button": "Action Button"
+                "Button": "Botón de acción"
             }
         },
         "Impact": {
-            "sectionTitle": "Impact",
+            "sectionTitle": "Impacto",
             "sectionBody": "Porttitor ultricies magnis tincidunt nostra odio id. In pharetra efficitur, penatibus nascetur imperdiet mus torquent. Congue mauris euismod lorem vehicula tellus fringilla condimentum tincidunt diam. At vel semper mollis; semper vivamus sociosqu ex. Ultrices nunc commodo mi nascetur egestas neque potenti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos inceptos suspendisse cubilia urna? Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
             
         }
