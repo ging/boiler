@@ -22,7 +22,7 @@ const Image = ({
     "w-full h-full", // La imagen ocupará todo el contenedor
     {
       "object-cover": fit === "cover", // Uso de object-cover para cubrir el contenedor
-      "object-contain justify-start": fit === "contain", // Uso de object-contain para mantener la relación de aspecto
+      "object-contain": fit === "contain", // Uso de object-contain para mantener la relación de aspecto
     }
   );
 

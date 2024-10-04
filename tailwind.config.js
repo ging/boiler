@@ -33,13 +33,14 @@ module.exports = {
         // whiteFull: "#ffffff",
         snow: "#EFF7FB",
         black: "#0D0D1C",
+
         primary: { // azul oscuro
-          DEFAULT: "#24234C",
-         //900: "#3302BF",
-          800: "#4507C9",
-          // 700: "#4F1BE4",
-          600: "#5441FF",
-          // 500: "#6E76FF",
+          DEFAULT: "#056dc1",
+          900: "#0e406c",
+          800: "#094b83",
+          700: "#05589f",
+          600: "#056dc1",
+          500: "#118de6",
           400: "#97A7FF",
           300: "#b2bef7",
           200: "#DBE2FF",
@@ -48,18 +49,16 @@ module.exports = {
           foreground: "#FFFFFF",
          
         },
-        secondary: { // azul claro
-          DEFAULT: "#9CD7F5",
-          // 900: "#3302BF",
-          // 800: "#4507C9",
-          700: "#45bbf7",
-          600: "#56b9ea",
-          500: "#76c9f2",
-          400: "#9CD7F5",
-          300: "#B0DFF7",
-          200: "#C4E7F9",
-          100: "#D7EFFB",
-          50: "#EBF7FD",
+        secondary: { 
+          DEFAULT: "#9ca3af",
+          700: "#374151",
+          600: "#4b5563",
+          500: "#6b7280",
+          400: "#9ca3af",
+          300: "#d1d5db",
+          200: "#e5e7eb",
+          100: "#f3f4f6",
+          50: "#f9fafb",
           foreground: "#24234C"
         },
         accent: { // morado
@@ -69,10 +68,22 @@ module.exports = {
           // 100: "#FFE685",
         },
         background: {
-          DEFAULT:"#323238",
-          400: "525259",
-          300: "74747a"
-       }
+          DEFAULT:"#f7f7ef",
+          400: "#EFF7FB",
+          300: "#EFF7FB"
+        },
+        ring: {
+          DEFAULT: "#cbe0ed",
+        },
+        shadow: {
+          DEFAULT:"#cbd5e1",
+        },
+        title: {
+          DEFAULT:"#323232"
+        },
+        text: {
+          DEFAULT:"#323232"
+        }
       },
     },
     screens: {

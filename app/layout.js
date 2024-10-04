@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
   
       <html className={` ${sourceSans.variable} ${inter.variable} `}> 
-      <body>
+      <body className="bg-background"> 
         <Header/>
         {isClient ? (
           <div>

@@ -14,10 +14,10 @@ export default function Filters({ search, changeSearch, year, changeYear, items,
 
   return (
     <div className="filters standard_margin ">
-      <div className="filter-block flex flex-col lg:flex-row gap_filter">
+      <div className="filter-block flex flex-col md:flex-row gap_filter">
         <FilterText search={search} changeSearch={changeSearch} ></FilterText>
         {/* <div className="container_selects gap_div flex flex-row"> */}
-       <div className="w-full lg:w-2/3 flex gap_grid">
+       <div className="w-full md:w-1/2 flex gap_grid">
           <FilterCategory category={category} changeCategory={changeCategory} categories={categories} />
     
           <FilterDate items={items} year={year} changeYear={changeYear} />

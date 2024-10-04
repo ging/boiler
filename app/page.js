@@ -49,7 +49,7 @@ export default function Projects() {
     <main>
       <Banner>
         <BannerContent className={"w-full"}>
-          <BannerTitle>{t("front.title")}</BannerTitle>
+          <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance">
             {t("front.description")}
           </BannerDescription>
@@ -75,11 +75,11 @@ export default function Projects() {
         />
       </Banner>
 
-      <section className="standard_padding bg-snow">
-        <Heading level="h2">{t("front.section1Title")}</Heading>
+      <section className="standard_padding">
+        <Heading level="h3">{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>
         <Divider size="lg" />
-        <Heading level="h4" className="mb-6">
+        <Heading level="h3" className="mb-6">
           {t("front.section1Subtitle")}
         </Heading>
         {/* Cards con iconos */}

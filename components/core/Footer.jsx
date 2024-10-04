@@ -25,15 +25,15 @@ export default function Footer(props) {
   );
 
   const sectionTitleClasses = clsx(
-    "smallcaps text-left mb-2 text-[14px] font-bold"
+    "smallcaps text-left-2 text-[14px] font-bold"
   );
 
   return (
     <footer className="narrow_padding flex flex-wrap justify-between md:flex-nowrap gap-4 sm:gap-8 lg:gap-12 items-start bg-gray-300 text-gray-800">
       <div className={projectLogoContainerClasses + " w-full border-b pb-4 border-gray-400 md:border-0"}>
         <img
-          className="w-full min-w-64 max-w-[200px]" // Corrige la sintaxis del max-width
-          src="logo_boiler_light.svg"
+          className="w-full min-w-40 max-w-[200px]" // Corrige la sintaxis del max-width
+          src="logo_boiler.svg"
           alt="logo placeholder"
         />
         <div className=" flex justify-center flex-col gap-0 xs:flex-row xs:gap-2 md:flex-col md:gap-0">

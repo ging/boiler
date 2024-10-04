@@ -21,7 +21,7 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       direction: {
@@ -228,7 +228,7 @@ const Card = React.forwardRef(
 
     // PUBLICATIONS - ok
     const publicationCard = (
-      <article className={cn(CardVariants({ direction, className })+ " bg-white")}>
+      <article className={cn(CardVariants({ direction, className })+ " bg-background")}>
         <header className="w-full flex gap-3 justify-start">
           <Badge variant="outline" size="lg">
             {date}

@@ -64,13 +64,13 @@
   @apply gap-2 sm:gap-3 lg:gap-4 xl:gap-6
 }
 .gap_grid {
-  @apply gap-3 sm:gap-4 lg:gap-5 xl:gap-6
+  @apply gap-3 sm:gap-4 md:gap-5 xl:gap-6
 }
 /*esta clase es importante, porque los gaps con el responsive
 no son iguales, ni van in crecendo, porque la estructura
 del filter cambia de bloque a inline*/
 .gap_filter {
-@apply gap-0 lg:gap-5 xl:gap-6
+@apply gap-0 md:gap-5 xl:gap-6
 }
 .gap_grid-r {
     @apply gap-x-4 sm:gap-x-6 lg:gap-x-8 xl:gap-x-10

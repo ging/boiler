@@ -13,7 +13,7 @@ const badgeVariants = cva(
         outline:
           "border-primary bg-tranparent text-primary",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground",
+          "border-transparent bg-secondary-300 text-secondary-foreground",
       },
       size: {
         default:

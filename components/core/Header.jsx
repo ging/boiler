@@ -20,8 +20,8 @@ export default function Header(props) {
   const headerClasses = clsx(
     "h-fit",
     "px-8 py-4 sticky -top-[1px] w-full",
-    "flex justify-between items-center",
-    "bg-primary text-white",
+    "flex justify-between items-center md:items-start",
+    "bg-background text-gray-800 shadow-md",
     
     `header_${currentLang} z-50`,
     {
@@ -37,7 +37,7 @@ export default function Header(props) {
     "absolute top-[48px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
-    "bg-primary bg-blend-darken md:bg-none",
+    "bg-background bg-blend-darken md:bg-none",
     "border-t-[1px] border-t-snow md:border-none",
     {
       "block md:flex": state.open,
@@ -59,15 +59,15 @@ export default function Header(props) {
   return (
     <header className={headerClasses + "z-50"} id="header_home"> {/* route={routes.route} ?????*/}
       <a href="/">
-        <div className="h-8 flex gap-4">
+        <div className="h-6 py-0.5 flex gap-4">
         <img
             className="object-contain"
-            src="logo_sm_boiler_light.svg"
+            src="logo_sm_boiler.svg"
             alt="logo"
           />
           <img
             className="object-contain"
-            src="logo_boiler_light.svg"
+            src="logo_boiler.svg"
             alt="logo"
           />
         </div>

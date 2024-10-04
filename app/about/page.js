@@ -21,11 +21,11 @@ export default function About() {
   return (
     <div className={"projects page_" + currentLang}>
       <section className="parallax__layer standard_margin">
-        <div className="flex flex-col sm:gap-4 md:gap-4">
+        <div className="flex flex-col">
           <Heading level="h3" className="text-left">{t("about.Intro.sectionTitle")}</Heading>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-12 items-start">
+          <div className="flex flex-col md:flex-row gap-4 lg:gap-12 items-start">
             <p className="basis-3/4">{t("about.Intro.sectionBody")}</p>
-            <Heading level="h5" className="basis-1/4 font-semibold mt-4 md:mt-0 ">
+            <Heading level="highlight" className="basis-1/4 font-semibold mt-4 md:mt-0 text-primary">
               {t("about.Intro.sectionHighlight")}
             </Heading>
           </div>
@@ -34,13 +34,13 @@ export default function About() {
 
   
       <section className="standard_margin">
-        <h2 className="text-left text-white">
+        <Heading level="h3" className="text-left ">
           {t("about.Goals.sectionTitle")}
-        </h2>
+        </Heading>
         <div className=" flex items-center sm:items-strech sm:justify-stretch flex-col sm:grid sm:grid-cols-3 gap-4 md:gap-6 mb-20">
-          <div className="h-full  w-full xs:w-3/4 sm:w-full bg-secondary/40 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+          <div className="h-full  w-full xs:w-3/4 sm:w-full bg-primary-200 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
       
-            <span className="mx-auto w-12 bg-primary-300/80 rounded-full content-center flex justify-center items-center mb-3">
+            <span className="mx-auto w-12 bg-primary-300 rounded-full content-center flex justify-center items-center mb-3">
             <FigmaLogoIcon className="text-center p-3 justify-center h-12 w-12  text-primary" />
             </span>
             <div>
@@ -48,9 +48,9 @@ export default function About() {
               <p className=""> {t("about.Goals.Goal1.GoalBody")}</p>
             </div>
           </div>
-          <div className="h-full w-full xs:w-3/4 sm:w-full bg-secondary/40 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+          <div className="h-full w-full xs:w-3/4 sm:w-full bg-primary-200  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
           
-            <span className=" mx-auto w-12 bg-primary-300/80 rounded-full content-center flex justify-center items-center mb-3">
+            <span className=" mx-auto w-12 bg-primary-300  rounded-full content-center flex justify-center items-center mb-3">
             <ScissorsIcon className="text-center p-3 justify-center h-12 w-12 text-primary" />
             </span>
             <div>
@@ -58,9 +58,9 @@ export default function About() {
               <p className=""> {t("about.Goals.Goal2.GoalBody")}</p>
             </div>
           </div>
-          <div className="h-full w-full xs:w-3/4 sm:w-full bg-secondary/40 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+          <div className="h-full w-full xs:w-3/4 sm:w-full bg-primary-200 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
            
-            <span className="mx-auto w-12 bg-primary-300/80 rounded-full content-center flex justify-center items-center mb-3">
+            <span className="mx-auto w-12 bg-primary-300  rounded-full content-center flex justify-center items-center mb-3">
             <HeartIcon className="text-center p-3 justify-center h-12 w-12 text-primary" />
             </span>
             <div>
@@ -71,7 +71,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="subprojects standard_padding-y bg-secondary">
+      <section className="subprojects standard_padding-y bg-secondary-300">
         <Heading level="h3" className="text-left standard_margin-x mb-4 ">
           {t("about.Columns.sectionTitle")}
         </Heading>

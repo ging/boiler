@@ -81,6 +81,7 @@ export const en = {
     },
     "publications": {
         "title": "Publications",
+        "description": "Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
         "publicationCards": {
             "categories": {
                 "article-journal": "Article Journal",
