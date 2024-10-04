@@ -14,8 +14,6 @@ const ButtonVariants = cva(
       variant: {
         default:
           "bg-primary text-primary-foreground shadow hover:bg-primary-800",
-        destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
           "border border-input border-primary text-secondary-foreground bg-transparent shadow-sm hover:bg-primary/10 ",
         outlineForeground: //for outline buttons over dark backgrounds
@@ -35,10 +33,8 @@ const ButtonVariants = cva(
       size: {
         default: " px-5 py-2.5 text-base",
         sm: "px-4 py-2 text-sm font-semibold",
-        lg: "px-5 py-2.5 text-h5",
-        //este funciona con color
-        // lg: "px-5 py-2.5 text-md",
-        icon: "px-5 w-8 py-2.5 text-sm",
+        lg: "px-5 py-2.5 text-lg",
+        icon: "px-5 w-8 py-2.5",
       },
       radius: {
         rounded_sm: "rounded-sm",

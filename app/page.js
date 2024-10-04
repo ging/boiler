@@ -10,19 +10,18 @@ import Heading from "@/components/ui/Heading";
 import Divider from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import Image from "@/components/ui/image";
-import Img from "@/components/ui/imgSvg";
+import Image from "@/components/ui/image-old";
+import Img from "@/components/ui/image";
 
 //Card
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardSubtitle,
-} from "@/components/ui/card";
+  Card, CardVariants
+} from "@/components/core/Cards";
+
+//Card
+import {
+  customCard,
+} from "@/components/ui/customCard";
 
 //Banner
 import {
@@ -85,8 +84,8 @@ export default function Projects() {
         </Heading>
         {/* Cards con iconos */}
         <div className="flex flex-col sm:grid md:grid-cols-3 gap-6">
-          <Card
-            cardType="normal"
+          <customCard
+            title={""}
             className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 flex justify-center items-center">
@@ -103,10 +102,11 @@ export default function Projects() {
               </svg>
             </div>
             <Heading level="h5"> {t("front.Goals.Goal1.GoalTitle")}</Heading>
-          </Card>
-          <Card
+          </customCard>
+
+          <customCard
             cardType="normal"
-            className="text-center content-center bg-indigo-200 p-6 flex flex-col h-full justify-between"
+            className="text-center content-center border border-indigo-500 p-6 flex flex-col h-full justify-between"
           >
             <Img
               isSvg={true}
@@ -129,8 +129,8 @@ export default function Projects() {
               badgeSize=""
             />
             <Heading level="h5"> {t("front.Goals.Goal2.GoalTitle")}</Heading>
-          </Card>
-          <Card cardType="normal" className="text-center content-center p-6">
+          </customCard>
+          <customCard cardType="normal" className="text-center content-center p-6">
             <div className="icon pb-8 content-center flex justify-center items-center">
               <Image
                 src="placeholder.jpg"
@@ -141,7 +141,7 @@ export default function Projects() {
               />
             </div>
             <Heading level="h5"> {t("front.Goals.Goal3.GoalTitle")}</Heading>
-          </Card>
+          </customCard>
         </div>
       </section>
     </main>

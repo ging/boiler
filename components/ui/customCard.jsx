@@ -10,13 +10,13 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
 import Heading from "@/components/ui/Heading"
 
-const Card = React.forwardRef(({ className, ...props }, ref) => (
+const customCard = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
     {...props} />
 ))
-Card.displayName = "Card"
+customCard.displayName = "customCard"
 
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -30,7 +30,7 @@ CardHeader.displayName = "CardHeader"
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
-    level="h5" 
+    level="h3" 
     className={cn("font-semibold leading-5 tracking-tight", className)}
     {...props} 
   />
@@ -40,7 +40,7 @@ CardTitle.displayName = "CardTitle"
 const CardSubtitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading 
     ref={ref}
-    level="h2" 
+    level="h55" 
     className={cn(className)}
     {...props}/>
 ))
@@ -67,4 +67,4 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }
+export { customCard, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }

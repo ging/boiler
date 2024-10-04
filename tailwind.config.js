@@ -17,7 +17,7 @@ module.exports = {
         "sourceSans": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
-        // 'xs': ['0.75rem', { lineHeight: '1.4' }],
+        'xs': ['0.5rem', { lineHeight: '1.4' }],
         'sm': ['0.75rem', { lineHeight: '1.4' }],
         'base': ['1rem', { lineHeight: '1.4' }], // body
 
@@ -26,7 +26,7 @@ module.exports = {
         'h2': ['2.5rem', { lineHeight: '1.4' }],
         'h3': ['1.75rem', { lineHeight: '1.4' }],
         'h4': ['1.5rem', { lineHeight: '1.4' }],
-        'h5': ['1.25rem', { lineHeight: '1.4' }],
+        'h5': ['1.25rem', { lineHeight: '1.4'}],
         'h6': ['0.9rem', { lineHeight: '1.4' }],
       },
       colors: {

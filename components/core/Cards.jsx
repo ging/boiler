@@ -11,6 +11,8 @@ import Heading from "../ui/Heading";
 import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
+import Image from "../ui/image";
+
 import {
   FaceIcon,
   ArrowRightIcon,
@@ -19,25 +21,15 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  " min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
-      variant: {
-        default: "bg-white shadow hover:bg-primary/40",
-        project:
-          "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
-        course: "bg-purple-50",
-        publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "p-0 bg-snow border border-input shadow-sm hover:bg-snow hover:scale-[101%]",
-        tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
-      },
       direction: {
         default: "flex flex-col", // horizontal
         vertical: "flex",
       },
     },
     defaultVariants: {
-      variant: "default",
       direction: "default",
     },
   }
@@ -114,6 +106,7 @@ const Card = React.forwardRef(
       subtitle,
       description,
       img,
+      svg,
       tags,
       date,
       category,
@@ -133,26 +126,38 @@ const Card = React.forwardRef(
     ref
   ) => {
     const globalCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <article className={cn(CardVariants({ direction, className }))}>
         {/* card header */}
         {(date || category) && (
           <header className="w-full flex gap-2 justify-start">
-            <Badge variant="outline" size="lg">
+            {date && (<Badge variant="outline" size="lg">
               {date}
-            </Badge>
-            <Badge variant="outline" size="lg">
+            </Badge>)}
+            {category && (<Badge variant="outline" size="lg">
               {category}
-            </Badge>
+            </Badge>)}
           </header>
         )}
         {/* card image */}
-        {img && (
-          <img
+        {img || svg && (
+          // <image
+          //   src={/* process.env.PUBLIC_URL */ +img}
+          //   alt={img}
+          //   className={classesImg}
+          // />
+          <Image
+            isSvg={svg? true : false}
+            svgCode={svg}
             src={/* process.env.PUBLIC_URL */ +img}
             alt={img}
             className={classesImg}
+            fit="cover"
+            hasBadge={false}
+            badgeVariant=""
+            badgeSize=""
           />
         )}
+
         {/* card body */}
         {(title || subtitle || description || tags) && (
           <div className={cardBodyClasses}>
@@ -183,7 +188,7 @@ const Card = React.forwardRef(
 
     // PROJECT
     const projectCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <article className={cn(CardVariants({ direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
           <Badge variant="outline" size="lg">
             {date}
@@ -207,7 +212,7 @@ const Card = React.forwardRef(
 
     // COURSE
     const courseCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <article className={cn(CardVariants({ direction, className }))}>
         <header className="flex w-full gap-4 items-center">
           <Badge variant="outline" size="lg">
             {date}
@@ -231,7 +236,7 @@ const Card = React.forwardRef(
 
     // PUBLICATIONS - ok
     const publicationCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <article className={cn(CardVariants({ direction, className }))}>
         <header className="w-full flex gap-3 justify-start">
           <Badge variant="outline" size="lg">
             {date}
@@ -264,22 +269,29 @@ const Card = React.forwardRef(
     const teamCard = (
       <article
         className={
-          cn(CardVariants({ variant, direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
+          cn(CardVariants({direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
         }
       >
-        {img && (
-          <img
-            src={/* process.env.PUBLIC_URL */ +img}
-            alt={img}
-            className={classesImg + " w-full min-h-40"}
+        {(img || svg) && (
+          <Image
+            isSvg={!!svg} // Si svg está definido, será true
+            svgCode={svg || ""} // Pasamos el código SVG si existe
+            src={img || ""} // La imagen por defecto será una cadena vacía si no hay src
+            alt={title || "Image"} // Usa el título como alt si existe
+            className={classesImg}
+            fit="cover" // Ajustamos el contenido al contenedor
+            hasBadge={position? true : false} // Por defecto, no tiene badge
+            badgeVariant=""
+            badgeSize=""
+            badgeContent={position}
           />
         )}
         {(name || position || description || email) && (
-          <div className="p-4 h-full w-full flex flex-col justify-start items-center mb-auto">
+          <div className="p-4 h-fit w-full flex flex-col justify-start items-center mb-auto">
             <Heading level="h5" className={"text-inherit text-center"}>
-              {name} {position}
+              {name}
             </Heading>
-            <Text type="short-p">{role}</Text>
+            { role && (<Text type="short-p">{role}</Text>)}
            {email && <Text className={"font-semibold"}>{email}</Text>}
           </div>
         )}
@@ -292,9 +304,9 @@ const Card = React.forwardRef(
 
     // TOOL - ok
     const toolCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <article className={cn(CardVariants({ direction, className }))}>
         {img && (
-          <img
+          <image
             src={/* process.env.PUBLIC_URL */ +img}
             alt={img}
             className={classesImg}

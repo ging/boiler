@@ -6,7 +6,7 @@ import Link from "next/link";
 import { mypublications } from "@/constants/publications";
 
 import { useTranslation } from "react-i18next";
-import { Card, CardVariants } from "@/components/core/Cards";
+import { Card, CardVariants } from "@/components/core/CustomCards";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
