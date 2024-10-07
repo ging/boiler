@@ -19,19 +19,16 @@ const ButtonVariants = cva(
         outlineForeground: //for outline buttons over dark backgrounds
           "border border-input border-secondary text-secondary-100 shadow-sm hover:bg-primary/30 hover:text-accent-foreground",
         secondary:
-          "bg-secondary-300 text-secondary-foreground shadow-sm hover:bg-secondary-200",
+          "bg-secondary-300 text-secondary-foreground shadow-sm hover:bg-secondary-400",
           ghost:
-          "bg-transparent text-primary hover:underline-offset-4 hover:bg-secondary-100/60 shadow-none",
+          "bg-transparent text-primary hover:underline-offset-4 hover:bg-secondary-200 shadow-none",
         link: 
           "!px-0.5 text-secondary-foreground bg-transparent hover:bg-transparent hover:underline shadow-none",
-        ghostForeground: 
-          "text-primary-foreground bg-transparent hover:bg-accent/10 hover:text-accent-foreground shadow-none",
-
         linkForeground:
           "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none", 
         },
       size: {
-        default: " px-5 py-2.5 text-base",
+        default: "px-5 py-2.5 text-base",
         sm: "px-4 py-2 text-sm font-semibold",
         lg: "px-5 py-2.5 text-lg",
         icon: "px-5 w-8 py-2.5",

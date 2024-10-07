@@ -49,7 +49,7 @@ const Heading = ({ level = "h1", children, className }) => {
       "text-h4 2xl:text-xl mb-2 text-title": level === "h4",
       "text-h5 2xl:text-lg mb-2 text-title": level === "h5",
       "text-h6 uppercase mb-2 text-title": level === "h6",
-      "text-h5 2xl:text-lg mb-2 text-primary": level === "highlight"
+      "text-h4 2xl:text-lg mb-2 text-primary max-w-[45ch]": level === "highlight"
     },
     className
   ])

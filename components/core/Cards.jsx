@@ -46,6 +46,12 @@ const tagContainerClasses = cn(
 );
 const classesImg = cn("bg-gray-200 min-h-16 min-w-16 object-cover");
 
+
+/**
+ * Se puede integrar si cambiamos el modelo de datos del json por array
+ * @param {String} tags
+ * @returns string array
+ */
 const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
@@ -128,7 +134,7 @@ const Card = React.forwardRef(
         {/* card header */}
         {(date || category) && (
           <header className="w-full flex gap-2 justify-start">
-            {date && (<Badge variant="outline" size="lg">
+            {date && (<Badge variant="outline" size="lg" className={"capitalize"}>
               {date}
             </Badge>)}
             {category && (<Badge variant="outline" size="lg">
@@ -187,7 +193,7 @@ const Card = React.forwardRef(
     // PROJECT
     const projectCard = (
       <article className={cn(CardVariants({ direction, className }))}>
-        <header className="w-full flex gap-4 justify-start">
+        <header className="w-full flex gap-2 justify-start">
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
@@ -211,7 +217,7 @@ const Card = React.forwardRef(
     // COURSE
     const courseCard = (
       <article className={cn(CardVariants({ direction, className }))}>
-        <header className="flex w-full gap-4 items-center">
+        <header className="flex w-full gap-2 items-center">
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
@@ -235,7 +241,7 @@ const Card = React.forwardRef(
     // PUBLICATIONS - ok
     const publicationCard = (
       <article className={cn(CardVariants({ direction, className })+ " bg-background")}>
-        <header className="w-full flex gap-3 justify-start">
+        <header className="w-full flex gap-2 justify-start">
           <Badge variant="outline" size="lg">
             {date}
           </Badge>

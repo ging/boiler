@@ -10,13 +10,13 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
 import Heading from "@/components/ui/Heading"
 
-const customCard = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
+  <article
     ref={ref}
-    className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
+    className={cn("rounded-xl border flex flex-col justify-center shadow bg-primary-200 text-primary-800", className)}
     {...props} />
 ))
-customCard.displayName = "customCard"
+CustomCard.displayName = "CustomCard"
 
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -49,13 +49,13 @@ CardSubtitle.displayName = "CardSubtitle"
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-muted-foreground", className)}
     {...props} />
 ))
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-2 pt-2 h-full bg-secondary text-black", className)} {...props} />
+  <div ref={ref} className={cn("m-2 h-full ", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
@@ -67,4 +67,4 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ))
 CardFooter.displayName = "CardFooter"
 
-export { customCard, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }
+export { CustomCard, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }

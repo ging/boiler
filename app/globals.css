@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  /*border: 1px solid salmon*/
+  /* border: 1px solid salmon */
 }
 
 /*TYPE*/
@@ -75,6 +75,13 @@ del filter cambia de bloque a inline*/
 .gap_grid-r {
     @apply gap-x-4 sm:gap-x-6 lg:gap-x-8 xl:gap-x-10
 }
+
+/* DIVIDERS */
+.divider_auto {
+  @apply h-full;
+}
+
+
 main {
   min-height: 85dvh;
 }
