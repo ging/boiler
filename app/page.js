@@ -10,8 +10,7 @@ import Heading from "@/components/ui/Heading";
 import Divider from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import Image from "@/components/ui/image-old";
-import Img from "@/components/ui/image";
+import Image from "@/components/ui/image";
 
 //Card
 import {
@@ -65,7 +64,7 @@ export default function Projects() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-        <Img
+        <Image
           src="placeholder.jpg"
           alt="Descripción de la imagen"
           fit="contain"
@@ -108,7 +107,7 @@ export default function Projects() {
             cardType="normal"
             className="text-center content-center border border-indigo-500 p-6 flex flex-col h-full justify-between"
           >
-            <Img
+            <Image
               isSvg={true}
               svgCode={`              
                 <svg
