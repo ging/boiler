@@ -34,8 +34,8 @@ import {
 } from "@/components/core/Banner";
 
 // UI
-export default function Projects() {
-  // const [projects, setProjects] = useState(myprojectCards);
+export default function Page() {
+  //const [projects, setProjects] = useState(myprojectCards);
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const { t, i18n } = useTranslation();

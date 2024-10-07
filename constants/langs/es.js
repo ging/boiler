@@ -90,10 +90,10 @@ export const es = {
                 "article-journal": "Artículo de revista",
                 "paper-conference": "Acta de congreso",
                 "book": "Libro",
-                "chapter": "Capítulo",
-              
+                "chapter": "Capítulo", 
             },
         },
+        "action-button": "Leer publicación",
         "filter":{
             "fieldTitle1":"Buscar",
             "fieldTitle2":"Tipo de publicación",

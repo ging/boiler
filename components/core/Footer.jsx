@@ -72,7 +72,7 @@ export default function Footer(props) {
       </nav>
 
       <div>
-        <div className={sectionTitleClasses}>{t("footer.title3")}</div>
+        <div className={sectionTitleClasses + " pb-2"} >{t("footer.title3")}</div>
         <div className="w-fit flex gap-4 justify-start items-center flex-wrap xs:flex-col sm:flex-row  sm:flex-wrap lg:flex-nowrap">
           {/* <div className={partnerLogoClasses}>
             <img className={imgClasses} src="placeholder.jpg" alt="logo UPM" />

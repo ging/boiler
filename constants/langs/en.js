@@ -91,6 +91,7 @@ export const en = {
 
             },
         },
+        "action-button": "Read publication",
         "filter":{
             "fieldTitle1":"Search",
             "fieldTitle2":"Publication type",

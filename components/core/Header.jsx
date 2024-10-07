@@ -3,9 +3,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import clsx from "clsx";
 import LangSwitcher from "./../LangSwitcher";
 import { routes } from "@/constants/routes";
+
 
 // icons
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
@@ -15,7 +19,6 @@ export default function Header(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
- 
   // classes
   const headerClasses = clsx(
     "h-fit",
@@ -34,11 +37,12 @@ export default function Header(props) {
 
   const menuClasses = clsx(
     "w-screen px-8 py-4 md:p-0 md:w-fit",
-    "absolute top-[48px] -right-8 md:static",
+    "absolute top-[40px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
     "bg-background bg-blend-darken md:bg-none",
-    "border-t-[1px] border-t-snow md:border-none",
+    "border-t-2 border-t-gray md:border-none",
+    "shadow-md md:shadow-none",
     {
       "block md:flex": state.open,
       "hidden md:flex": !state.open,
@@ -47,12 +51,13 @@ export default function Header(props) {
 
   const menuItems = clsx(
     "flex flex-col justify-end items-center md:flex-row",
-    "gap-0 md:gap-4"
+    "gap-0 md:gap-4",
+    
   );
 
   const menuItemClasses = clsx(
-    "w-full py-4 px-4 text-center md:p-0 md:w-fit",
-    "text-lg font-medium md:text-base",
+    "w-full py-2 px-4 text-center md:p-0 md:w-fit",
+    "text-lg md:text-base",
     "hover:underline"
   );
 
@@ -94,17 +99,25 @@ export default function Header(props) {
         {/* menu nav */} 
         <div className={menuClasses}>
           <ul className={menuItems}>
-            {routes.map((route, index) => (
-              <li key={index} className={menuItemClasses}>
-                <Link suppressHydrationWarning
-                  href={route.route}
-                  onClick={() => setState({ open: false })}
+            {routes.map((route, index, page) => (
+              <li key={index} >
+                <NavLink suppressHydrationWarning
+                  to={route.route}
+                  // onClick={() => setState({ open: false })}
+                  className={({ isActive }) => isActive ? menuItemClasses + " font-semibold" : menuItemClasses + " font-normal"} 
+                  key={route.index}
                 >
                   {t(route.key)}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
+          {/* <Routes>
+          {routes.map((route, page, index) => (
+            <Route path={route.route} element={route.page} className={console.log(route.page)}/>
+          ))}
+          </Routes> */}
+          <Outlet />
           <LangSwitcher />
         </div>
         {/* /menu nav */}

@@ -13,6 +13,8 @@ import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import Image from "../ui/image";
 
+import { useTranslation } from "react-i18next";
+
 import {
   FaceIcon,
   ArrowRightIcon,
@@ -114,9 +116,13 @@ const Card = React.forwardRef(
       cardType,
       role,
       currentLang
+      
     },
     ref
+    
   ) => {
+    const { t } = useTranslation();
+
     const globalCard = (
       <article className={cn(CardVariants({ direction, className }))}>
         {/* card header */}
@@ -247,7 +253,7 @@ const Card = React.forwardRef(
           {doi ? (
             <Button asChild variant="secondary" radius="rounded_md">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
-                Leer publicación
+              {t("publications.action-button")}
              
                 <ArrowRightIcon />
               </Link>
