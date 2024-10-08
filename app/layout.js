@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
 
   return (
 <Router>
+
       <html className={` ${sourceSans.variable} ${inter.variable} `}> 
       <title>Boiler</title>
       <body className="bg-background"> 
