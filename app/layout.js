@@ -29,7 +29,9 @@ export default function RootLayout({ children }) {
 
   return (
 <Router>
+
       <html className={` ${sourceSans.variable} ${inter.variable} `}> 
+      <title>Amazing Page</title>
       <body className="bg-background"> 
         <Header route={"/"}/>
        
