@@ -13,7 +13,7 @@ import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import Image from "@/components/ui/image";
 
 // componentDidMount() {
-//   document.title = "Amazing Page";
+//   document.title = "Boiler GING";
 // }
 import {
   CustomCard,
@@ -46,7 +46,6 @@ export default function Page() {
 
   return (
     <main>
-    <title>Amazing Page</title>
       <Banner>
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
