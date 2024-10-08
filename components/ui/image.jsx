@@ -14,7 +14,7 @@ const Image = ({
   badgeVariant = "",
   badgeSize = "",
   badgeContent = "badge",
-  isSvg = false, // Nuevo prop para detectar SVG
+  isSvg = false, // prop para detectar SVG
   svgCode = "",  // SVG en formato de código
 }) => {
   const imageContainerClasses = clsx(
@@ -26,7 +26,7 @@ const Image = ({
     "w-full h-full flex items-center justify-center", 
     {
       "object-cover": fit === "cover",
-      "object-contain justify-start": fit === "contain",
+      "object-contain": fit === "contain",
     }
   );
 
@@ -45,11 +45,11 @@ const Image = ({
     <div className={imageContainerClasses}>
       {isSvg ? (
         <div
-          className={imageClasses}
+          className={imageClasses + ""}
           dangerouslySetInnerHTML={{ __html: svgCode }} // Renderizamos SVG
         />
       ) : (
-        <img src={src} alt={alt} className={"h-fit w-fit"} />
+        <img src={src} alt={alt} className={imageClasses} />
       )}
       {hasBadge && (
         <Badge className={badgeLayout} variant={badgeVariant} size={badgeSize}>

@@ -3,7 +3,6 @@
 import * as React from "react";
 import clsx from "clsx";
 
-
 import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority";
 
@@ -13,7 +12,7 @@ import Heading from "@/components/ui/Heading"
 const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
   <article
     ref={ref}
-    className={cn("rounded-xl border flex flex-col justify-center shadow bg-primary-200 text-primary-800", className)}
+    className={cn("p-2 h-full w-3/4 sm:w-full rounded-xl border flex flex-col justify-start gap-4 shadow bg-primary-200 text-primary-800", className)}
     {...props} />
 ))
 CustomCard.displayName = "CustomCard"
@@ -21,7 +20,7 @@ CustomCard.displayName = "CustomCard"
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-2 ", className)}
+    className={cn("flex flex-col space-y-1.5 p-2", className)}
     {...props} />
 
 ))
@@ -40,7 +39,7 @@ CardTitle.displayName = "CardTitle"
 const CardSubtitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading 
     ref={ref}
-    level="h55" 
+    level="h5" 
     className={cn(className)}
     {...props}/>
 ))
@@ -55,7 +54,7 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("m-2 h-full ", className)} {...props} />
+  <div ref={ref} className={cn("h-fit", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
