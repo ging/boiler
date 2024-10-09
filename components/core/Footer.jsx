@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { routes } from "@/constants/routes";
+import { activeRoutes } from "@/constants/routes";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import Image from "../ui/image";
 import Text from "../ui/Text";
@@ -51,10 +51,10 @@ export default function Footer(props) {
         <div className={sectionTitleClasses}>{t("footer.title1")}</div>
         <ul
           className={`columns-1 gap-x-8 inline-block ${
-            routes.length <= 3 ? "sm:columns-1" : "sm:columns-2 md:columns-1"
+            activeRoutes.length <= 3 ? "sm:columns-1" : "sm:columns-2 md:columns-1"
           }`}
         >
-          {routes.map((route, index) => (
+          {activeRoutes.map((route, index) => (
             <li
               key={index}
               className={

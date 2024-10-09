@@ -5,14 +5,15 @@ export const en = {
         "item3":"Team",
         "item4":"Research",
         "item5":"Contact",
-        "item6":"Design system"
+        "item6":"Design system",
+        "item7":"Documentation"
     },
     "header": {
         "publicationstab": "Publications",
     },
     "front": {
         "title": "Boilerplate by GING",
-        "description": "Customizable website template for research groups and other projects. See documentation at {notion URL} to use the template.",
+        "description": "Customizable website template for research groups and other projects. See documentation at https://ging.github.io/boiler/documentation/ to use the template.",
         "action-button": "About us",
         "section1Title": "Short description of the project",
         "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",

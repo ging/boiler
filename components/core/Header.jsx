@@ -5,11 +5,10 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+
 import clsx from "clsx";
 import LangSwitcher from "./../LangSwitcher";
-import { routes } from "@/constants/routes";
-
+import { activeRoutes } from "@/constants/routes";
 
 // icons
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
@@ -18,6 +17,7 @@ export default function Header(props) {
   const [state, setState] = useState({ open: false });
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+//  console.log(activeRoutes)
 
   // classes
   const headerClasses = clsx(
@@ -98,8 +98,9 @@ export default function Header(props) {
 
         {/* menu nav */} 
         <div className={menuClasses}>
+         
           <ul className={menuItems}>
-            {routes.map((route, index, page) => (
+            {activeRoutes.map((route, index, page) => (
               <li key={index} >
                 <NavLink suppressHydrationWarning
                   to={route.route}
