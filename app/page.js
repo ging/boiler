@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Divider from "@/components/ui/divider";
+import {Divider, DividerVariants} from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import Image from "@/components/ui/image";
@@ -47,7 +47,6 @@ export default function Page() {
 
   return (
     <main>
-    <title>Amazing Page</title>
       {/* <Banner>
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>

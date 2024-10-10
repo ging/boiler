@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
-import clsx from "clsx";
+import * as React from "react";
+import { cva } from "class-variance-authority";
+
+import { cn } from "@/lib/utils"
 
 /* 
   ------------------------------------------------------------------
@@ -9,36 +11,31 @@ import clsx from "clsx";
   ------------------------------------------------------------------
 */
 
-const Divider = ({ size = "md", className }) => {
-  // Determinar el componente HTML según el nivel
-  let Component;
-  switch (size) {
-    case "sm":
-      Component = "sm";
-      break;
-    case "md":
-      Component = "md";
-      break;
-    case "lg":
-      Component = "lg";
-      break;
-    default:
-      Component = "md"; // Por defecto, usar h1 si no se especifica nivel válido
-      break;
-  }
-
-  // clsx, aplica clases según el valor del atributo size de manera dinámica
-  const classes = clsx([
-    "flex w-full",
+  const DividerVariants = cva(
+    "h-4",
     {
-      "h-6": size === "sm", // Aplicar "adasd" si el nivel es h1
-      "h-10": size === "md",
-      "h-12": size === "lg",
-    },
-    className
-  ])
+      variants: {
+        size: {
+          default: "h-4",
+          sm: "h-6",
+          md: "h-10",
+          lg: "h-12",
+        },
+      },
+    }
+  );
 
-  return <Component className={classes}></Component>;
-};
+  // return <Component className={DividerVariants}></Component>;
+  const Divider = React.forwardRef(({ className, size, ...props }, ref) => {
+    return (
+      <div
+        className={cn(DividerVariants({ size }), className)} 
+        ref={ref}
+        {...props}
+      />
+    );
+  });
+  Divider.displayName = "Divider"
 
-export default Divider;
+export { Divider, DividerVariants }
+

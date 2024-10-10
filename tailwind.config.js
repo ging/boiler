@@ -59,7 +59,7 @@ module.exports = {
           200: "#e5e7eb",
           100: "#f3f4f6",
           50: "#f9fafb",
-          foreground: "#24234C"
+          foreground: "#ffffff"
         },
         accent: { // morado
           DEFAULT: "#62388E",
