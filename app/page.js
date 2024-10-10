@@ -35,6 +35,7 @@ import {
   BannerContent,
   BannerImg,
 } from "@/components/core/Banner";
+import BannerPum from "@/components/bannerPum";
 
 // UI
 export default function Page() {
@@ -51,7 +52,7 @@ export default function Page() {
   return (
     <main>
     <title>Amazing Page</title>
-      <Banner>
+      {/* <Banner>
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance">
@@ -77,7 +78,9 @@ export default function Page() {
           badgeVariant=""
           badgeSize=""
         />
-      </Banner>
+      </Banner> */}
+      
+      <BannerPum></BannerPum>
 
       <section className="standard_padding">
         <Heading level="h3">{t("front.section1Title")}</Heading>
