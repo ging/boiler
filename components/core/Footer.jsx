@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { routes } from "@/constants/routes";
+import { activeRoutes } from "@/constants/routes";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import Image from "../ui/image";
 import Text from "../ui/Text";
@@ -20,9 +20,9 @@ export default function Footer(props) {
     "flex justify-start items-center h-20 w-40 overflow-hidden"
   );
 
-  const imgClasses = clsx(
-    "max-w-[200px] md:max-w-[140px] lg:max-w-[180px] img-contain"
-  );
+  // const imgClasses = clsx(
+  //   "max-w-[200px] md:max-w-[140px] lg:max-w-[180px] img-contain"
+  // );
 
   const sectionTitleClasses = clsx(
     "smallcaps text-left-2 text-[14px] font-bold"
@@ -47,14 +47,14 @@ export default function Footer(props) {
         </div>
       </div>
 
-      <nav className=" w-full xs:w-2/6 md:w-1/3 lg:w-1/4 border-b pb-4 border-gray-400 xs:border-0">
+      <nav className="w-fit border-b border-gray-400 xs:border-0">
         <div className={sectionTitleClasses}>{t("footer.title1")}</div>
         <ul
           className={`columns-1 gap-x-8 inline-block ${
-            routes.length <= 3 ? "sm:columns-1" : "sm:columns-2 md:columns-1"
+            activeRoutes.length <= 3 ? "sm:columns-1" : "sm:columns-2 md:columns-1"
           }`}
         >
-          {routes.map((route, index) => (
+          {activeRoutes.map((route, index) => (
             <li
               key={index}
               className={

@@ -31,10 +31,9 @@ export default function RootLayout({ children }) {
 <Router>
 
       <html className={` ${sourceSans.variable} ${inter.variable} `}> 
-      <title>Amazing Page</title>
+      <title>Boiler</title>
       <body className="bg-background"> 
         <Header route={"/"}/>
-       
         {isClient ? (
           <div>
              <Routes>
@@ -43,8 +42,8 @@ export default function RootLayout({ children }) {
           ))}
           </Routes>
             </div>
-        ) : null}
-        <Footer />
+        ) : null} 
+        <Footer /> 
       </body>
     </html>
     </Router>

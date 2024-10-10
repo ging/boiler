@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  /* border: 1px solid salmon */
+  border: 1px solid salmon
 }
 
 /*TYPE*/
@@ -51,7 +51,7 @@
   @apply py-6 sm:py-6 md:py-8 lg:py-12 
 }
 .padding_card_highlight {
-  @apply pt-4 pb-4 px-6 sm:p-4 md:pb-6 lg:pb-8 lg:pt-8;
+  @apply py-3 px-6 sm:p-4 md:pb-6 lg:px-6;
 }
 
 
