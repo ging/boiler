@@ -32,12 +32,13 @@ export default function Team(props) {
         email,
         center,
         roleTranslationKey,
-      }) => {
+      }, key) => {
         const emailAddress = email ? email.split("@") : null;
         const translatedRole = t(`${roleTranslationKey}`);
         const translatedPosition = t(position);
         return (
           <Card
+            key={key}
             cardType={"team"}
             className={CardVariants({
               variant: "team",
@@ -59,7 +60,8 @@ export default function Team(props) {
       {/* <Header route={"/team"} />   */}
       <main className="standard_margin">
         <Heading level="h2">{t("team.title")}</Heading>
-        <section className="mx-auto xs:ml-0 flex flex-wrap xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 justify-center">
+        {/* <section className="mx-auto grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> */}
+        <section className="mx-auto flex flex-wrap gap-8 justify-center">
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>

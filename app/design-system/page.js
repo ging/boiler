@@ -18,7 +18,6 @@ import { FaceIcon } from "@radix-ui/react-icons";
 import { projects } from "@/constants/projects";
 import { mypublications } from "@/constants/publications";
 
-
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -31,7 +30,7 @@ export default function DesignSystem(props) {
   const [filteredCards, setFilteredCards] = useState(projects);
 
   // Tus categorías para el filtro
-  const categories = ["all", "ind", "erg", "other"]; 
+  const categories = ["all", "ind", "erg", "other"];
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
@@ -214,11 +213,11 @@ export default function DesignSystem(props) {
         >
           badge outline
         </Badge>
-        </div>
+      </div>
 
-        {/* badge sizes */}
-        <Heading level="h5">Size</Heading>
-        <div className="flex flex-wrap gap-4 pb-8">
+      {/* badge sizes */}
+      <Heading level="h5">Size</Heading>
+      <div className="flex flex-wrap gap-4 pb-8">
         <Badge
           href="#"
           className={badgeVariants({
@@ -248,7 +247,6 @@ export default function DesignSystem(props) {
         </Badge>
       </div>
 
-
       {/* cards */}
       <Heading level="h3">Cards</Heading>
       <section className="cards grid md:grid-cols-2 gap-4">
@@ -271,8 +269,7 @@ export default function DesignSystem(props) {
             return (
               <Card
                 key={id}
-                className={CardVariants({
-                })}
+                className={CardVariants({})}
                 date={date}
                 title={title}
                 subtitle={center}
@@ -291,11 +288,10 @@ export default function DesignSystem(props) {
       <section className="cards grid md:grid-cols-2 gap-4 mt-4">
         <Card
           cardType={"project"}
-          className={CardVariants({
-          })}
+          className={CardVariants({})}
           date={"fecha"}
           title={
-            "Utilización de escape rooms y videojuegos educativos en la Educación Universitaria"
+            "Project. Utilización de escape rooms y videojuegos educativos en la Educación Universitaria"
           }
           subtitle={"E.T.S DE ING. DE SISTEMAS INFORMÁTICOS"}
           tags={
@@ -313,10 +309,9 @@ export default function DesignSystem(props) {
 
         <Card
           cardType={"course"}
-          className={CardVariants({
-          })}
+          className={CardVariants({})}
           date={"2023"}
-          title={"Desarrollo de aplicaciones con React y React Native"}
+          title={"Course. Desarrollo de aplicaciones con React y React Native"}
           subtitle={"2nd Edition"}
           description={
             "Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."
@@ -328,11 +323,10 @@ export default function DesignSystem(props) {
 
         <Card
           cardType={"publication"}
-          className={CardVariants({
-          })}
+          className={CardVariants({})}
           date={"2024"}
           title={
-            "Empowering Database Learning through Remote Educational Escape Rooms"
+            "Pub. Empowering Database Learning through Remote Educational Escape Rooms"
           }
           author={
             "Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde"
@@ -344,46 +338,26 @@ export default function DesignSystem(props) {
         ></Card>
 
         <Card
-          cardType={"team"}
-          className={CardVariants({
-          })}
-          img={"/assets/img/courses/fondo-cursos.png"}
-          name={"Nombre Apellidos"}
-          position={"Profesor Titular"}
-          center={"E.T.S. de ingenieros de telecomunicacion"}
-          mail={"napellidos@upm.es"}
-        ></Card>
-        <Card
           cardType={"tool"}
-          className={CardVariants({
-          })}
+          className={CardVariants({})}
           img={"/assets/img/courses/fondo-cursos.png"}
-          title={"Card de herramienta"}
+          title={"Tool. Card de herramienta"}
           description={"descripción de la herramienta"}
           route={"https://github.com/agordillo/RESCORM"}
           github={"https://github.com/agordillo/RESCORM"}
         ></Card>
 
-
-
-
         <Card
-          cardType={"team"} 
-          className={CardVariants({  
-          })}
+          cardType={"team"}
+          className={CardVariants({})}
           date={"2024"}
-          name={
-            "Nombre Apellidos"
-          }
-          position={
-            "Eadasdasde"
-          }
-          tags={"Database, Learning, Remote, Education"}  // Tags separados por comas
-          category={"article-journal"}  // Categoría, será traducida a "artículo de revista"
-          img="placeholder.jpg"  // URL de la imagen
+          name={"Team. Nombre Apellidos"}
+          position={"Eadasdasde"}
+          tags={"Database, Learning, Remote, Education"} // Tags separados por comas
+          category={"article-journal"} // Categoría, será traducida a "artículo de revista"
+          img="placeholder.jpg" // URL de la imagen
           // svg={`<svg width="100" height="100"><circle cx="50" cy="50" r="40" fill="blue" /></svg>`} // Código SVG
         />
-
       </section>
       <section>
         <Heading level="h3" className={"mt-12"}>
@@ -406,8 +380,7 @@ export default function DesignSystem(props) {
               <Card
                 key={index}
                 cardType={"project"}
-                className={CardVariants({
-                })}
+                className={CardVariants({})}
                 date={date}
                 category={category}
                 title={title}
@@ -420,13 +393,13 @@ export default function DesignSystem(props) {
           )}
         </div>
       </section>
-      
+
       <Heading level="h3">Recent publications</Heading>
-      <RecentPublications/>
+      <RecentPublications />
 
-
-      <Heading level="h3" className={"border-t-2 border-t-primary pt-2 mt-4"}>Jerarquías de textos</Heading>
-
+      <Heading level="h3" className={"border-t-2 border-t-primary pt-2 mt-4"}>
+        Jerarquías de textos
+      </Heading>
 
       <Heading level="h2">Títulos de 1er nivel</Heading>
       <Text type="p"></Text>
@@ -448,8 +421,6 @@ export default function DesignSystem(props) {
 
       <Text type="p">jerarquías de textos</Text>
       <Text type="small">jerarquías de textos</Text>
-
-
     </main>
   );
 }
