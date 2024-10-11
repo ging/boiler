@@ -12,7 +12,7 @@ import Heading from "@/components/ui/Heading"
 const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
   <article
     ref={ref}
-    className={cn("p-2 h-full w-3/4 sm:w-full rounded-xl border flex flex-col justify-start gap-4 shadow bg-primary-200 text-primary-800", className)}
+    className={cn("p-2 h-full xs:w-3/4 md:w-full rounded-xl border flex flex-col justify-start gap-4 shadow bg-primary-200/70 text-primary-800", className)}
     {...props} />
 ))
 CustomCard.displayName = "CustomCard"
@@ -30,7 +30,7 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
     level="h3" 
-    className={cn("font-semibold leading-5 tracking-tight", className)}
+    className={cn("font-semibold leading-6 tracking-tight", className)}
     {...props} 
   />
 ))

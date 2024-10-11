@@ -47,8 +47,7 @@ export default function Page() {
 
   return (
     <main>
-    <title>Amazing Page</title>
-      {/* <Banner>
+      <Banner>
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance">
@@ -66,17 +65,17 @@ export default function Page() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-        <Image
+        <BannerImg
           src="placeholder.jpg"
           alt="Descripción de la imagen"
           fit="contain"
           hasBadge={true}
           badgeVariant=""
           badgeSize=""
+          // className={"hidden"}
         />
-      </Banner> */}
-      
-      <BannerPum></BannerPum>
+      </Banner> 
+      {/* <BannerPum></BannerPum> */}
 
       <section className="standard_padding">
         <Heading level="h3">{t("front.section1Title")}</Heading>

@@ -11,7 +11,7 @@ import Text from "@/components/ui/Text";
 
 export default function BannerPum(props) {
     const { t } = useTranslation();
-    return (
+    return (<>
         <div className="bg-gradient-to-r from-black to-white p-20">
             <div className="flex flex-col justify-end absolute right-10 top-28">
                 
@@ -23,5 +23,7 @@ export default function BannerPum(props) {
                 este es un degradado
             </div>
         </div>
+    
+      </>
     )
 }

@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
 
   return (
 <Router>
-
       <html className={` ${sourceSans.variable} ${inter.variable} `}> 
       <title>Boiler</title>
       <body className="bg-background"> 
@@ -38,7 +37,7 @@ export default function RootLayout({ children }) {
           <div>
              <Routes>
           {routes.map((route, page, index) => (
-            <Route path={route.route} element={route.page} className={console.log(route.page)}/>
+            <Route path={route.route} element={route.page}/>
           ))}
           </Routes>
             </div>

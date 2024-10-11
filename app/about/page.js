@@ -55,27 +55,35 @@ export default function About() {
           {t("about.Goals.sectionTitle")}
         </Heading>
 
-        <div className=" flex items-center sm:items-strech sm:justify-stretch flex-col sm:grid sm:grid-cols-3 gap-4 md:gap-6 mb-20">
-          <CustomCard className="flex flex-col justify-start gap-4 xs:w-3/4 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
-              <FigmaLogoIcon className="mx-auto p-3 h-12 w-12 rounded-full bg-primary-300 text-primary" />
+        <div className=" flex items-center sm:items-strech sm:justify-stretch flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-20">
+        <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+             <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
+             <FigmaLogoIcon className="m-auto h-7 w-7  text-primary" />
+             </div>
             <CardTitle level="h4">{t("about.Goals.Goal1.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal1.GoalBody")}</CardDescription>
           </CustomCard>
 
-          <CustomCard className="flex flex-col justify-start gap-4 xs:w-3/4 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
-              <ScissorsIcon className="mx-auto p-3 h-12 w-12 rounded-full bg-primary-300 text-primary"/>
+          <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+          <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
+              <ScissorsIcon className="m-auto h-7 w-7  text-primary"/>
+              </div>
             <CardTitle level="h4">{t("about.Goals.Goal2.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal2.GoalBody")}</CardDescription>
           </CustomCard>
 
           <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
-              <HeartIcon className="mx-auto p-3 h-12 w-12 rounded-full bg-primary-300 text-primary" />
+          <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
+              <HeartIcon className="m-auto h-7 w-7  text-primary" />
+              </div>
             <CardTitle level="h4">{t("about.Goals.Goal3.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal3.GoalBody")}</CardDescription>
           </CustomCard>
 
-          <CustomCard className="flex flex-col justify-start gap-4 xs:w-3/4 shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
-            <FigmaLogoIcon className="mx-auto p-3 h-12 w-12 rounded-full bg-primary-300 text-primary"/>
+          <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
+          <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
+            <FigmaLogoIcon className="m-auto h-7 w-7  text-primary"/>
+            </div>
             {/* <span className="divider_auto" /> */}
             <CardTitle level="h4">Título de la card</CardTitle>
             <CardDescription>

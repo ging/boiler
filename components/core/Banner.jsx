@@ -68,9 +68,9 @@ const BannerButton = React.forwardRef(({ className, ...props }, ref) => (
 BannerButton.displayName = "BannerButton";
 
 const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("hidden md:block", className)}>
+  <div ref={ref} className={cn("hidden md:block relative w-full h-full overflow-hidden", className)}>
     <img
-      className="object-contain"
+      className="w-full h-full flex items-center justify-center object-contain"
       src="placeholder.jpg"
       alt="icon"
     />

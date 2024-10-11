@@ -34,16 +34,16 @@ module.exports = {
         snow: "#EFF7FB",
         black: "#0D0D1C",
 
-        primary: { // azul oscuro
+        primary: { // azul genérico
           DEFAULT: "#056dc1",
           900: "#0e406c",
           800: "#094b83",
           700: "#05589f",
           600: "#056dc1",
           500: "#118de6",
-          400: "#97A7FF",
-          300: "#b2bef7",
-          200: "#DBE2FF",
+          400: "#3ba8f5",
+          300: "#7fc5fa",
+          200: "#bbdffc",
           100: "#e0effe",
           50: "#f0f7ff",
           foreground: "#FFFFFF",
@@ -95,7 +95,7 @@ module.exports = {
       '2xl': '1536px',    
     },
     backgroundImage: {
-      'main': "url('/assets/fondos/eunomia_fondo_default.png')",
+      'main': "url('/assets/fondos/background_banner.png')",
     }
   },
   plugins: [

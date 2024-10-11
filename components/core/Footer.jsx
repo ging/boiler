@@ -2,7 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
-import Link from "next/link";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { activeRoutes } from "@/constants/routes";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
@@ -59,13 +59,13 @@ export default function Footer(props) {
               key={index}
               className={
                 route.route === props.route
-                  ? "li-selected text-left mb-1 lg:mb-1.5"
-                  : "text-left mb-1 lg:mb-1.5"
+                  ? "li-selected text-left mb-1 lg:mb-1.5 hover:underline"
+                  : "text-left mb-1 lg:mb-1.5 hover:underline"
               }
             >
-              <Link className="text-base" href={route.route}>
+              <NavLink className="text-base" to={route.route}>
                 {t(route.key)}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

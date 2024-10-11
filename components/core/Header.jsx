@@ -51,12 +51,12 @@ export default function Header(props) {
 
   const menuItems = clsx(
     "flex flex-col justify-end items-center md:flex-row",
-    "gap-0 md:gap-4",
+    "gap-1 md:gap-4",
     
   );
 
   const menuItemClasses = clsx(
-    "w-full py-2 px-4 text-center md:p-0 md:w-fit",
+    "w-full px-4 text-center md:p-0 md:w-fit",
     "text-lg md:text-base",
     "hover:underline"
   );
