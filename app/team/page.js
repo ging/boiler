@@ -60,8 +60,8 @@ export default function Team(props) {
       {/* <Header route={"/team"} />   */}
       <main className="standard_margin">
         <Heading level="h2">{t("team.title")}</Heading>
-        {/* <section className="mx-auto grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> */}
-        <section className="mx-auto flex flex-wrap gap-8 justify-center">
+         <section className="mx-auto grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-4 ">
+        {/* <section className="mx-auto flex flex-wrap gap-8 justify-center"> */}
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>

@@ -234,7 +234,7 @@ const Card = React.forwardRef(
               {name}
             </CardTitle>
             { role && (<CardDescription type="short-p">{role}</CardDescription>)}
-           {email && <CardDescription className={"font-semibold"}>{email}</CardDescription>}
+           {email && <CardDescription className={"font-semibold break-words text-wrap"}>{email}</CardDescription>}
           </CardContent>
         )}
         {/* {( email &&    
