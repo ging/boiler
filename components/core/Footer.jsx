@@ -2,12 +2,12 @@
 
 import React from "react";
 import clsx from "clsx";
-import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { activeRoutes } from "@/constants/routes";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import Image from "../ui/image";
 import Text from "../ui/Text";
+import Link from 'next/link';
 
 export default function Footer(props) {
   const { t } = useTranslation();
@@ -63,9 +63,9 @@ export default function Footer(props) {
                   : "text-left mb-1 lg:mb-1.5 hover:underline"
               }
             >
-              <NavLink className="text-base" to={route.route}>
+              <Link className="text-base" href={route.route}>
                 {t(route.key)}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>
