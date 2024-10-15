@@ -62,8 +62,8 @@ const Team = (props) => {
     <main className={"team page_" + currentLang }>
       {/* <Header route={"/team"} />   */}
       <main className="standard_margin">
-        <Heading level="h2">{t("team.title")}</Heading>
-         <section className="mx-auto grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-4 ">
+        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">{t("team.title")}</Heading>
+         <section className="flex flex-wrap justify-center xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 ">
         {/* <section className="mx-auto flex flex-wrap gap-8 justify-center"> */}
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>

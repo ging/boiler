@@ -13,7 +13,7 @@ import Text from "@/components/ui/Text"
 const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
   <article
     ref={ref}
-    className={cn("p-2 h-full xs:w-3/4 md:w-full rounded-xl border flex flex-col justify-start gap-4 shadow bg-primary-200/70 text-primary-800", className)}
+    className={cn("p-2 h-full w-full rounded-xl border flex flex-col justify-start gap-4 overflow-hidden shadow bg-primary-200/70 text-primary-800", className)}
     {...props} />
 ))
 CustomCard.displayName = "CustomCard"
@@ -31,7 +31,7 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
     level="h3" 
-    className={cn("font-semibold leading-6 tracking-tight", className)}
+    className={cn("font-semibold tracking-tight", className)}
     {...props} 
   />
 ))
@@ -62,7 +62,7 @@ CardContent.displayName = "CardContent"
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <footer
     ref={ref}
-    className={cn("pt-2 w-full flex gap-3 items-center", className)}
+    className={cn("pt-2 w-full flex gap-3 justify-end items-center", className)}
     {...props} />
 ))
 CardFooter.displayName = "CardFooter"

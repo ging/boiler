@@ -32,7 +32,7 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  "border  min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       direction: {
@@ -146,14 +146,14 @@ const Card = React.forwardRef(
         </CardHeader>
         <CardContent className="h-full">
           <CardTitle level="h3">{title}</CardTitle>
-          <CardSubtitle level="h5">{subtitle}</CardSubtitle>
+          <CardSubtitle level="h6">{subtitle}</CardSubtitle>
           {description && <CardDescription>{description}</CardDescription>}
           <div className={tagContainerClasses}>{renderTags(tags)}</div>
         </CardContent>
-        <footer>
+        <CardFooter className="justify-center">
           <Button href={route}>Ver proyecto</Button>{" "}
           {/**revisar el href que no funciona el link */}
-        </footer>
+        </CardFooter>
       </CustomCard>
     );
 
@@ -191,12 +191,12 @@ const Card = React.forwardRef(
           {translateCategory(category, currentLang)}
         </CardHeader>
         <CardContent className="gap-1">
-          <CardTitle level="h5">
+          <CardTitle level="h3">
             <i>{title}</i>
           </CardTitle>
           <Text level="p">{author}</Text>
         </CardContent>
-        <CardFooter className={"justify-end"}>
+        <CardFooter>
           {doi ? (
             <Button asChild variant="" radius="rounded_md">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
@@ -238,9 +238,9 @@ const Card = React.forwardRef(
           </CardContent>
         )}
         {/* {( email &&    
-        <footer>
+        <CardFooter>
           <a href={email}>{email}</a>
-        </footer>)} */}
+        </CardFooter>)} */}
       </CustomCard>
     );
 
@@ -259,7 +259,7 @@ const Card = React.forwardRef(
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardContent>
-        <CardFooter  className={"justify-end"}>
+        <CardFooter>
         {( github && <Button asChild variant="link">
             <Link rel="noopener noreferrer" target="_blank" href={github}>
               GitHub
