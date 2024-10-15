@@ -24,7 +24,7 @@ const nextConfig = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: isProd ? '/ging' : '',
+  basePath: isProd ? '/boiler' : '',
 
   /**
    * Set asset prefix. This is the URL prefix for assets.

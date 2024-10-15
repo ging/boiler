@@ -249,8 +249,8 @@ const Card = React.forwardRef(
       <CustomCard className={cn(CardVariants({ direction, className }))}>
         {img && (
           <Image
-          src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-          alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+          src={basePath+img || "placeholder.jpg"}
+          alt={basePath+img || "placeholder.jpg"}
           className={"h-24"}
           fit="contain"
         />
