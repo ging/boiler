@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 import clsx from "clsx";
 import LangSwitcher from "./../LangSwitcher";
@@ -17,7 +16,7 @@ export default function Header(props) {
   const [state, setState] = useState({ open: false });
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-//  console.log(activeRoutes)
+  const currentPath = usePathname();
 
   // classes
   const headerClasses = clsx(
@@ -98,27 +97,22 @@ export default function Header(props) {
 
         {/* menu nav */} 
         <div className={menuClasses}>
-         
-          <ul className={menuItems}>
+        <ul className={menuItems}>
             {activeRoutes.map((route, index, page) => (
-              <li key={index} >
-                <NavLink suppressHydrationWarning
-                  to={route.route}
-                  // onClick={() => setState({ open: false })}
-                  className={({ isActive }) => isActive ? menuItemClasses + " font-semibold" : menuItemClasses + " font-normal"} 
-                  key={route.index}
+              <li key={index}>
+                <Link
+                  href={route.route}
+                  className={
+                    currentPath == route.route
+                      ? menuItemClasses + " font-semibold"
+                      : menuItemClasses + " font-normal"
+                  }
                 >
                   {t(route.key)}
-                </NavLink>
+                </Link>
               </li>
             ))}
-          </ul>
-          {/* <Routes>
-          {routes.map((route, page, index) => (
-            <Route path={route.route} element={route.page} className={console.log(route.page)}/>
-          ))}
-          </Routes> */}
-          <Outlet />
+          </ul>         
           <LangSwitcher />
         </div>
         {/* /menu nav */}

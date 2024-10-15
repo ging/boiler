@@ -28,9 +28,9 @@ export default function Research() {
     papersToShow: 6, // Number of papers to show initially
   });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   // desestructuración state
   const { items, search, year, category, papersToShow } = state;
@@ -115,9 +115,10 @@ export default function Research() {
         <section className="flex flex-col gap-4 standard_margin">
           {papersFiltered
             .slice(0, papersToShow)
-            .map(({ date, category, doi, author, title, journal }, ind) => {
+            .map(({ date, category, doi, author, title, journal }, key) => {
               return (
                 <Card 
+                key={key}
                   currentLang={currentLang}
                   cardType={"publication"}
                   className={CardVariants({

@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 
+export async function getStaticPaths() {
+  const res = await fetch('https://api.vercel.app/blog')
+  const data = await res.json()
+ 
+  return {
+    props: { data },
+    revalidate: 60,
+  }
+}
+
 const nextConfig = {
   /**
    * Enable static exports for the App Router.
@@ -14,7 +24,7 @@ const nextConfig = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: isProd ? 'https://github.com/ging' : '',
+  basePath: isProd ? '/ging' : '',
 
   /**
    * Set asset prefix. This is the URL prefix for assets.

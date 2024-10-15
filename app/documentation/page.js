@@ -23,9 +23,9 @@ export default function Documentation(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>

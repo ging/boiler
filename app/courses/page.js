@@ -11,9 +11,9 @@ export default function Courses() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const [courses, setCourses] = useState(mycourses);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className={"courses page_"+ currentLang}>

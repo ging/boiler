@@ -25,9 +25,9 @@ export default function About() {
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className={"projects page_" + currentLang}>

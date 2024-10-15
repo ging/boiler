@@ -1,13 +1,6 @@
 "use client";
 
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Outlet,
-  Routes,
-  Route,
-} from "react-router-dom";
-
 import { Source_Sans_3, Inter } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
@@ -25,7 +18,7 @@ const sourceSans = Source_Sans_3({
 });
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
 });
 
@@ -38,23 +31,17 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-<Router>
-      <html className={` ${sourceSans.variable} ${inter.variable} `}> 
+    <html className={` ${sourceSans.variable} ${inter.variable} `}>
       <title>Boiler</title>
-      <body className="bg-background"> 
-        <Header route={"/"}/>
-        {isClient ? (
-          <div>
-             <Routes>
-          {routes.map((route, page, index) => (
-            <Route path={route.route} element={route.page}/>
-          ))}
-          </Routes>
-            </div>
-          ) : null}
-          <Footer />
-        </body>
-      </html>
-    </Router>
+      <body className="bg-background">
+        <div>
+          <Header route={"/"} />
+        </div>
+        {children}
+        <div>
+          {/* <Footer /> */}
+        </div>
+      </body>
+    </html>
   );
 }

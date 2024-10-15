@@ -11,15 +11,18 @@ import Text from "@/components/ui/Text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { CardStackIcon } from "@radix-ui/react-icons";
 
+import dynamic from "next/dynamic";
 
-export default function Team(props) {
+
+
+const Team = (props) => {
   const [team, setTeam] = useState(myteam);
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   const renderMembers = (members) => {
     return members.map(
@@ -68,3 +71,5 @@ export default function Team(props) {
     </main>
   );
 }
+export default dynamic(() => Promise.resolve(Team), { ssr: false });
+

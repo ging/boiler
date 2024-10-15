@@ -40,9 +40,9 @@ export default function Page() {
   const [isHovered2, setIsHovered2] = useState(false);
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   // <p className="basis-3/4">{t("project.Intro.title")}</p>
 
   return (
