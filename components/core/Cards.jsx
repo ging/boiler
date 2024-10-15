@@ -125,7 +125,8 @@ const Card = React.forwardRef(
       buttonText,
       cardType,
       role,
-      currentLang
+      currentLang,
+      basePath
       
     },
     ref
@@ -221,7 +222,7 @@ const Card = React.forwardRef(
         {(img || svg) && (
           <Image
             className={"h-[220px] rounded-md"}
-            src={"/boiler"+ img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            src={basePath+ img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
             hasBadge={position? true : false} // Por defecto, no tiene badge
