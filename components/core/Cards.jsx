@@ -221,7 +221,7 @@ const Card = React.forwardRef(
         {(img || svg) && (
           <Image
             className={"h-[220px] rounded-md"}
-            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            src={"/boiler"+ img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
             hasBadge={position? true : false} // Por defecto, no tiene badge
@@ -249,8 +249,8 @@ const Card = React.forwardRef(
       <CustomCard className={cn(CardVariants({ direction, className }))}>
         {img && (
           <Image
-          src={"/boiler" +img || "placeholder.jpg"}
-          alt={"/boiler"+img || "placeholder.jpg"}
+          src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+          alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
           className={"h-24"}
           fit="contain"
         />
