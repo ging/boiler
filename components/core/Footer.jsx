@@ -80,7 +80,7 @@ export default function Footer(props) {
           <div className={partnerLogoClasses}>
             <Image
               fit="contain" // Ajuste de la imagen
-              src="/placeholder.jpg" // Usa una ruta válida
+              src="placeholder.jpg" // Usa una ruta válida
               alt="Descripción de la imagen"
               className="max-h-full w-auto justify-start" // Asegura que la imagen no exceda la altura máxima
             />
@@ -88,7 +88,7 @@ export default function Footer(props) {
           <div className={partnerLogoClasses}>
             <Image
               fit="contain" // Ajuste de la imagen
-              src="/placeholder.jpg" // Usa una ruta válida
+              src="placeholder.jpg" // Usa una ruta válida
               alt="Descripción de la imagen"
               className="max-h-full w-auto " // Asegura que la imagen no exceda la altura máxima
             />
