@@ -291,7 +291,7 @@ export default function DesignSystem(props) {
 
          <Card
            cardType={"tool"}
-           img={"/assets/img/courses/fondo-cursos.png"}
+           img={"assets/img/courses/fondo-cursos.png"}
            title={"Tool. Card de herramienta"}
            description={"descripción de la herramienta"}
            route={"https:github.com/agordillo/RESCORM"}
