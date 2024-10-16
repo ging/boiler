@@ -98,7 +98,7 @@ module.exports = {
       '2xl': '1536px',    
     },
     backgroundImage: {
-      'main': "url('assets/fondos/background_banner.png')",
+      'main': "url('/assets/fondos/background_banner.png')",
     }
   },
   plugins: [
