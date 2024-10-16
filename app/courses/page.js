@@ -5,6 +5,7 @@ import Link from "next/link";
 import { mycourses } from "@/constants/courses.js";
 import { useTranslation } from 'react-i18next';
 import { FaceIcon } from "@radix-ui/react-icons";
+import { Card, CardVariants } from "@/components/core/Cards";
 
 
 export default function Courses() {
@@ -27,41 +28,18 @@ export default function Courses() {
             <p>{t('courses.desc')}</p>
           </div>
           <div className=" grid gap-4 md:grid-cols-2 sm:grid-cols-1">
-            {courses.map(({ date, gradient, edition, title, description, route }) => {
+            {courses.map(({ date, edition, title, description, route }) => {
               return (
-                <div
-                  key={title}
-                  className={`rounded-lg px-6 py-4 course  ${gradient}`}
-                >
-                  <div className="course_main transition">
-                    <div className="course_content">
-                      <div className="card_container_top">
-                        <div className="flex gap-3">
-                        <span className="course_tag">
-                          <small>{date}</small>
-                        </span>
-                        <span className="course_tag">
-                          <small> {edition}{t('courses.tag')}</small>
-                        </span>
-                        </div>
-                        <button className="course_route">
-                        <CreateLink route={route}>
-                        <FaceIcon />
-                          <span>{t('courses.button')}</span>
-                        </CreateLink>
-                        </button>
-                      </div>
-                      <div className="course_text_block">
-                        <div className="course_title">
-                          <h4>{title}</h4>
-                        </div>
-                        <div className="course_description">
-                          <small> {description}</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Card
+                  cardType={"course"}
+                  date={date}
+                  title={title}
+                  subtitle={"edition " + edition}
+                  description={description}
+                  category={"MOOC"}
+                  buttonText={"curso"}
+                  href={route}
+                />
               );
             })}
           </div>
