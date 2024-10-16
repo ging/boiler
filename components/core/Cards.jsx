@@ -31,6 +31,10 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
+// const config = require('../../next.config');
+// console.log(config.basePath)
+// console.log(config)
+
 const CardVariants = cva(
   "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
@@ -222,7 +226,7 @@ const Card = React.forwardRef(
         {(img || svg) && (
           <Image
             className={"h-[220px] rounded-md"}
-            src={basePath+ img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            src={  img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
             hasBadge={position? true : false} // Por defecto, no tiene badge

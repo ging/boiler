@@ -19,6 +19,7 @@ const Team = (props) => {
   const [team, setTeam] = useState(myteam);
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  //console.log(basePath + "tamo aqui")
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
