@@ -66,7 +66,7 @@ export default function Page() {
           </Button>
         </BannerContent>
         <Image
-          src="assets/fondos/background_banner.png"
+          src="placeholder.png"
           alt="Descripción de la imagen"
           fit="cover"
           hasBadge={false}
