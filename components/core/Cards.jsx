@@ -19,7 +19,7 @@ import {
   CardSubtitle,
   CardDescription,
   CardFooter,
-  CardHeader
+  CardHeader,
 } from "@/components/ui/customCard";
 
 import { useTranslation } from "react-i18next";
@@ -54,7 +54,6 @@ const tagContainerClasses = cn(
   "mt-6 w-full flex flex-wrap gap-2 justify-start"
 );
 
-
 /**
  * Se puede integrar si cambiamos el modelo de datos del json por array
  * @param {String} tags
@@ -64,45 +63,46 @@ const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
   return tagsArray.map((tag, index) => (
-    <Badge key={index} variant="default">{tag}</Badge> // Añade una key a cada Label
+    <Badge key={index} variant="default">
+      {tag}
+    </Badge> // Añade una key a cada Label
   ));
 };
 
 // quitarle guión, añadir espaciado, mayúscula (Formateo)
 const renderCategory = (category) => {
   if (!category) return null;
-  const categoryFormat = category.split('-') // cadena en un array de palabras
-  .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
-  .join(' '); // unir las palabras con espacio
+  const categoryFormat = category
+    .split("-") // cadena en un array de palabras
+    .map((palabra) => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
+    .join(" "); // unir las palabras con espacio
   return (
-    <Badge variant="outline" size="lg">{categoryFormat}</Badge>  
-  )
+    <Badge variant="outline" size="lg">
+      {categoryFormat}
+    </Badge>
+  );
 };
 
 const translateCategory = (category, currentLang) => {
   if (currentLang == "es") {
     if (category == "article-journal") {
       category = "artículo-revista";
-      console.log(category)
-      }
-    else if (category == "paper-conference") {
+      console.log(category);
+    } else if (category == "paper-conference") {
       category = "acta-congreso";
-      console.log(category)
-      }
-    else if (category == "book") {
+      console.log(category);
+    } else if (category == "book") {
       category = "libro";
-      console.log(category)
-      }
-    else if (category == "chapter") {
+      console.log(category);
+    } else if (category == "chapter") {
       category = "capítulo";
-      console.log(category)
-      }
+      console.log(category);
+    }
   } else if (currentLang == "en") {
     // transformar "artículo-revista" en article journal
   }
-  return renderCategory(category)
-}
-
+  return renderCategory(category);
+};
 
 const Card = React.forwardRef(
   (
@@ -130,11 +130,9 @@ const Card = React.forwardRef(
       cardType,
       role,
       currentLang,
-      basePath
-      
+      basePath,
     },
     ref
-    
   ) => {
     const { t } = useTranslation();
 
@@ -164,7 +162,15 @@ const Card = React.forwardRef(
 
     // COURSE
     const courseCard = (
-      <CustomCard className={cn(CardVariants({ direction, className }))}>
+      <CustomCard
+        className={cn(CardVariants({ direction, className }))}
+        style={{
+          backgroundImage: "url('assets/fondos/background_image.png')", 
+          backgroundSize: "cover",
+          backgroundPosition: "center", 
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <CardHeader className="flex w-full gap-2 items-center">
           <Badge variant="outline" size="lg">
             {date}
@@ -177,18 +183,28 @@ const Card = React.forwardRef(
             Ir al curso <ExternalLinkIcon className="w-5 h-5" />
           </Button>
         </CardHeader>
+        {/* <Image
+            className={"h-40"}
+            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            alt={title || "Image"} // Usa el título como alt si existe
+            fit="cover" // Ajustamos el contenido al contenedor
+          /> */}
         <CardContent>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle level="h6">{subtitle}</CardSubtitle>
           <CardDescription>{description}</CardDescription>
-          <div className={tagContainerClasses}>{renderTags(tags)}</div>
+          {/* <div className={tagContainerClasses}>{renderTags(tags)}</div> */}
         </CardContent>
       </CustomCard>
     );
 
     // PUBLICATIONS - ok
     const publicationCard = (
-      <CustomCard className={cn(CardVariants({ direction, className })+ " bg-background")}>
+      <CustomCard
+        className={cn(
+          CardVariants({ direction, className }) + " bg-background"
+        )}
+      >
         <CardHeader>
           <Badge variant="outline" size="lg">
             {date}
@@ -205,8 +221,8 @@ const Card = React.forwardRef(
           {doi ? (
             <Button asChild variant="" radius="rounded_md">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
-              {t("publications.action-button")}
-             
+                {t("publications.action-button")}
+
                 <ArrowRightIcon />
               </Link>
             </Button>
@@ -226,10 +242,10 @@ const Card = React.forwardRef(
         {(img || svg) && (
           <Image
             className={"h-[220px] rounded-md"}
-            src={  img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
-            hasBadge={position? true : false} // Por defecto, no tiene badge
+            hasBadge={position ? true : false} // Por defecto, no tiene badge
             badgeContent={position}
           />
         )}
@@ -238,8 +254,14 @@ const Card = React.forwardRef(
             <CardTitle level="h5" className={"text-inherit text-center"}>
               {name}
             </CardTitle>
-            { role && (<CardDescription type="short-p">{role}</CardDescription>)}
-           {email && <CardDescription className={"font-semibold break-words text-wrap"}>{email}</CardDescription>}
+            {role && <CardDescription type="short-p">{role}</CardDescription>}
+            {email && (
+              <CardDescription
+                className={"font-semibold break-words text-wrap"}
+              >
+                {email}
+              </CardDescription>
+            )}
           </CardContent>
         )}
         {/* {( email &&    
@@ -254,22 +276,24 @@ const Card = React.forwardRef(
       <CustomCard className={cn(CardVariants({ direction, className }))}>
         {img && (
           <Image
-          src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-          alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-          className={"h-24"}
-          fit="contain"
-        />
+            src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+            alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+            className={"h-24"}
+            fit="contain"
+          />
         )}
         <CardContent>
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardContent>
         <CardFooter>
-        {( github && <Button asChild variant="link">
-            <Link rel="noopener noreferrer" target="_blank" href={github}>
-              GitHub
-            </Link>
-          </Button>)}
+          {github && (
+            <Button asChild variant="link">
+              <Link rel="noopener noreferrer" target="_blank" href={github}>
+                GitHub
+              </Link>
+            </Button>
+          )}
           <Button asChild variant="secondary" radius="rounded_md">
             <Link rel="noopener noreferrer" target="_blank" href={route}>
               Ver herramienta

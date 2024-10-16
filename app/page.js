@@ -65,14 +65,11 @@ export default function Page() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-        <BannerImg
-          src="placeholder.jpg"
+        <Image
+          src="assets/fondos/background_banner.png"
           alt="Descripción de la imagen"
-          fit="contain"
-          hasBadge={true}
-          badgeVariant=""
-          badgeSize=""
-          // className={"hidden"}
+          fit="cover"
+          hasBadge={false}
         />
       </Banner> 
       {/* <BannerPum></BannerPum> */}

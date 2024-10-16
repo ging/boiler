@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require('tailwindcss/plugin');
+import { Card, CardVariants } from "@/components/core/Cards";
+
 
 module.exports = {
   content: [
