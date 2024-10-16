@@ -12,9 +12,7 @@ import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import Image from "@/components/ui/image";
 
-// componentDidMount() {
-//   document.title = "Boiler GING";
-// }
+
 import {
   CustomCard,
   CardContent,
@@ -66,7 +64,7 @@ export default function Page() {
           </Button>
         </BannerContent>
         <Image
-          src="placeholder.png"
+          src="placeholder.jpg"
           alt="Descripción de la imagen"
           fit="cover"
           hasBadge={false}

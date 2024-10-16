@@ -3,6 +3,12 @@
 const plugin = require('tailwindcss/plugin');
 import { Card, CardVariants } from "@/components/core/Cards";
 
+const config = require('./next.config.mjs');
+console.log(config.basePath)
+console.log(config.default.basePath)
+
+// const basePathTailwind = config.default.basePath;
+const basePathTailwind = process.env.BASE_PATH || '';
 
 module.exports = {
   content: [
@@ -98,7 +104,7 @@ module.exports = {
       '2xl': '1536px',    
     },
     backgroundImage: {
-      'main': "url('/boiler/assets/fondos/background_banner.png')",
+      'main': `url('${basePathTailwind}/assets/fondos/background_banner.png')`,
     }
   },
   plugins: [

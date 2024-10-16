@@ -47,8 +47,8 @@ const nextConfig = {
    * Environment variables
    */
   env: {
-    PUBLIC_URL: isProd ? "https://ging.github.io/boiler/" : "",
-    BASE_PATH: isProd ? "" : ""
+    PUBLIC_URL: isProd ? "/boiler" : "",
+    BASE_PATH: isProd ? "/boiler" : ""
   }
 };
 

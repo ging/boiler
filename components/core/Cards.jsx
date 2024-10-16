@@ -31,10 +31,6 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-// const config = require('../../next.config');
-// console.log(config.basePath)
-// console.log(config)
-
 const CardVariants = cva(
   "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
