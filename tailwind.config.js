@@ -7,8 +7,8 @@ const config = require('./next.config.mjs');
 console.log(config.basePath)
 console.log(config.default.basePath)
 
-// const basePathTailwind = config.default.basePath;
-const basePathTailwind = process.env.BASE_PATH || '';
+const basePathTailwind = config.default.basePath;
+// const basePathTailwind = process.env.BASE_PATH || '';
 
 module.exports = {
   content: [
