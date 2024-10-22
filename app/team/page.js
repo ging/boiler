@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { myteam } from "@/constants/team";
+import team from "@/constants/placeholder-constants/team.json";
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -13,31 +13,28 @@ import { CardStackIcon } from "@radix-ui/react-icons";
 
 import dynamic from "next/dynamic";
 
-
-
 const Team = (props) => {
-  const [team, setTeam] = useState(myteam);
+  // Puedes usar directamente el array 'team' en lugar de 'teamData', pero si prefieres manejar el estado:
+  const [members, setMembers] = useState(team || []); // Inicializa el estado con los datos de 'team'
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  //console.log(basePath + "tamo aqui")
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  
 
   const renderMembers = (members) => {
     return members.map(
-      ({
-        name,
-        description,
-        position,
-        img,
-        github,
-        email,
-        center,
-        roleTranslationKey,
-      }, key) => {
-        const emailAddress = email ? email.split("@") : null;
+      (
+        {
+          name,
+          description,
+          position,
+          img,
+          github,
+          email,
+          center,
+          roleTranslationKey,
+        },
+        key
+      ) => {
         const translatedRole = t(`${roleTranslationKey}`);
         const translatedPosition = t(position);
         return (
@@ -53,24 +50,28 @@ const Team = (props) => {
             role={translatedRole}
             center={center}
             email={email}
-          ></Card>
+          />
         );
       }
     );
   };
 
   return (
-    <main className={"team page_" + currentLang }>
-      {/* <Header route={"/team"} />   */}
+    <main className={"team page_" + currentLang}>
       <main className="standard_margin">
-        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">{t("team.title")}</Heading>
-         <section className="flex flex-wrap justify-center xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 ">
-        {/* <section className="mx-auto flex flex-wrap gap-8 justify-center"> */}
-          {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
+        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
+          {t("team.title")}
+        </Heading>
+        <section className="flex flex-wrap justify-center xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12">
+          {Array.isArray(members) && members.length > 0 ? (
+            renderMembers(members)
+          ) : (
+            <p>No members found.</p>
+          )}
         </section>
       </main>
     </main>
   );
-}
-export default dynamic(() => Promise.resolve(Team), { ssr: false });
+};
 
+export default dynamic(() => Promise.resolve(Team), { ssr: false });

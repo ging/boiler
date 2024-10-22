@@ -1,4 +1,4 @@
-export const mypublications = [
+export const publications = [
   {
     "date": [2024],
     "doi": "https://doi.org/10.1109/MIC.2024.3341234",
@@ -141,18 +141,4 @@ export const mypublications = [
     "pages": "32-40",
     "content": "Gómez, C., Martínez, L., & Herrera, J. (2023). Blockchain Technologies in E-learning Systems. <i>IEEE Transactions on Learning Technologies</i>, <i>31</i>, 32–40. https://doi.org/10.1109/MIC.2023.3321123"
   }
-];
-
-const newAttribute = "stroke";
-const newAttributeValues = ["color-orange", "color-yellow", "color-purple"];
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-mypublications.forEach((item) => {
-  const randomIndex = getRandomInt(0, newAttributeValues.length - 1);
-  item[newAttribute] = newAttributeValues[randomIndex];
-});
-
-console.log(mypublications);
+]

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { mypublications } from "@/constants/publications";
+import { publications } from "@/constants/publications";
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Button, ButtonVariants } from "@/components/ui/button";
@@ -14,11 +14,11 @@ export default function RecentPublications(props) {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // Asegúrate de que mypublications sea un array válido
-    if (Array.isArray(mypublications)) {
-      setPapers(mypublications);
+    // Asegúrate de que publications sea un array válido
+    if (Array.isArray(publications)) {
+      setPapers(publications);
     } else {
-      console.error("mypublications no es un array:", mypublications);
+      console.error("publications no es un array:", publications);
     }
     window.scrollTo(0, 0);
   }, []);

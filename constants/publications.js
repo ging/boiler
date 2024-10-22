@@ -1,4 +1,4 @@
-export const mypublications = [
+export const publications = [
   {
     date: [2024],
     doi: "https://doi.org/10.1109/MIC.2023.3333199",
@@ -3776,9 +3776,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-mypublications.forEach((item) => {
+publications.forEach((item) => {
   const randomIndex = getRandomInt(0, newAttributeValues.length - 1);
   item[newAttribute] = newAttributeValues[randomIndex];
 });
 
-console.log(mypublications);
+console.log(publications);

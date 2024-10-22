@@ -1,0 +1,42 @@
+[
+	{
+		"id": "1",
+		"date": "2023",
+		"route": "#",
+		"title": "Title of the project",
+		"center": "E.T.S de Telecomunicaciones",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"tags": "Aprendizaje Activo,Aprendizaje Autónomo,Investigación educativa,Aula Invertida,Gamificación",
+		"category": "erg"
+	},
+	{
+		"id": "2",
+		"date": "2022",
+		"route": "#",
+		"title": "Title of the project",
+		"center": "E.T.S de Telecomunicaciones",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"tags": "Gamificación,Aprendizaje Activo,Innovación educativa,Enseñanza Universitaria",
+		"category": "erg"
+	},
+	{
+		"id": "3",
+		"date": "2021",
+		"route": "#",
+		"title": "Title of the project",
+		"center": "E.T.S de Telecomunicaciones",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"tags": "Gamificación,Aprendizaje Activo,Innovación educativa,Enseñanza Universitaria",
+		"category": "categoría"
+	},
+	{
+		"id": "4",
+		"date": "2023",
+		"route": "#",
+		"title": "Title of the project",
+		"center": "E.T.S de Telecomunicaciones",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"tags": "Videojuegos Educativos,Gamificación,Educación Universitaria,Aprendizaje Autónomo",
+		"category": "erg"
+	}
+]

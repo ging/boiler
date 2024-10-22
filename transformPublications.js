@@ -64,7 +64,7 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 		}
 	});
 
-	let final_str = "export const mypublications = " + JSON.stringify(str) + ";";
+	let final_str = "export const publications = " + JSON.stringify(str) + ";";
 
 	fs.writeFile('constants/publications.js', final_str, (err) => {
 		if (err) throw err;

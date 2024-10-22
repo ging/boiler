@@ -54,8 +54,14 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
 ))
 CardDescription.displayName = "CardDescription"
 
+const CardBody = React.forwardRef(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("h-full w-full flex flex-col justify-between", className)} {...props} />
+))
+CardBody.displayName = "CardBody"
+
+// Component for grouping content inside a main Card part (Header, Body, Footer)
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("h-fit w-full flex flex-col", className)} {...props} />
+  <div ref={ref} className={cn("h-fit w-full flex flex-col justify-start", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
@@ -67,4 +73,4 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ))
 CardFooter.displayName = "CardFooter"
 
-export { CustomCard, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }
+export { CustomCard, CardHeader, CardBody, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }
