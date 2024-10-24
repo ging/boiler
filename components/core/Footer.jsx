@@ -25,10 +25,10 @@ export default function Footer(props) {
   );
 
   return (
-    <footer className="narrow_padding flex flex-wrap justify-between gap-4 sm:gap-8 lg:gap-12 items-start bg-gray-300 text-gray-800">
-      <div className={projectLogoContainerClasses + " w-full pb-4 border-b border-secondary-400 md:border-0"}>
+    <footer className="narrow_padding flex flex-col flex-wrap justify-start gap-8 xs:flex-row justify-between items-start bg-gray-300 text-gray-800">
+      <div className={projectLogoContainerClasses}>
         <img
-          className="w-full min-w-40 max-w-[200px]" // Corrige la sintaxis del max-width
+          className="min-w-40 max-w-[200px]" // Corrige la sintaxis del max-width
           src="logo_boiler.svg"
           alt="logo placeholder"
         />
@@ -47,7 +47,7 @@ export default function Footer(props) {
         <div className={sectionTitleClasses}>{t("footer.title1")}</div>
         <ul
           className={`columns-1 gap-x-8 inline-block ${
-            activeRoutes.length <= 3 ? "sm:columns-1" : "md:columns-1"
+            activeRoutes.length <= 3 ? "xs:columns-1" : "xs:columns-2"
           }`}
         >
           {activeRoutes.map((route, index) => (
@@ -69,7 +69,7 @@ export default function Footer(props) {
 
       <div>
         <div className={sectionTitleClasses + " pb-2"} >{t("footer.title3")}</div>
-        <div className="w-fit flex gap-4 justify-start items-center flex-wrap xs:flex-col sm:flex-row  sm:flex-wrap lg:flex-nowrap">
+        <div className="w-fit flex gap-4 justify-start items-center flex-wrap flex-col xs:flex-row sm:flex-wrap lg:flex-nowrap">
 
           <div className={partnerLogoClasses}>
             <Image

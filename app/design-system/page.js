@@ -317,7 +317,7 @@ export default function DesignSystem(props) {
           <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
            {filteredCards.map(
              (
-               { date, route, title, author, center, description, category },
+               { date, title, author, doi, center, description, category },
                index
              ) => (
                <Card
@@ -330,7 +330,7 @@ export default function DesignSystem(props) {
                  subtitle={center}
                  description={description}
                 //  tags={tags}
-                 route={route}
+                 doi={doi}
                ></Card>
              )
            )}

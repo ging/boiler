@@ -15,8 +15,9 @@ export const es = {
     },
     "front": {
         "title": "Boilerplate del GING",
-        "description": "Plantilla personalizable de sitios web para grupos de investigación y otros proyectos. Puedes consultar la documentación en https://ging.github.io/boiler/documentation/ para empezar a usarla.",
-        "action-button": "Sobre proyecto",
+        "description": "Plantilla personalizable de sitios web para grupos de investigación y otros proyectos. Puedes consultar la documentación en el enlace de abajo para empezar a usarla.",
+        "doc-button": "Documentación",
+        "action-button": "Documentación (cambiar)",
         "section1Title": "Sobre el proyecto",
         "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
         "section1Subtitle": "Principios del proyecto",

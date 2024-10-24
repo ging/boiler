@@ -212,7 +212,7 @@ const Card = React.forwardRef(
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
-            <CardTitle level="h3">
+            <CardTitle level="h5">
               <i>{title}</i>
             </CardTitle>
             <Text level="p">{author}</Text>

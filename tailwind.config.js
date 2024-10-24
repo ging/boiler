@@ -25,18 +25,20 @@ module.exports = {
         "main": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
-        'xs': ['0.5rem', { lineHeight: '1.4' }],
-        'sm': ['0.75rem', { lineHeight: '1.4' }],
-        'base': ['1rem', { lineHeight: '1.4' }], // body
-
-        // con Hs creo que es mejor la verdad y así reservamos los tamañosde tw por si acaso
-        'h1': ['3rem', { lineHeight: '1.2' }],
-        'h2': ['2.5rem', { lineHeight: '1.2' }],
-        'h3': ['1.75rem', { lineHeight: '1.2' }],
-        'h4': ['1.5rem', { lineHeight: '1.2' }],
-        'h5': ['1.25rem', { lineHeight: '1.2'}],
-        'h6': ['1rem', { lineHeight: '1.2' }],
-
+        '2xs': ['0.625rem', { lineHeight: '1.4' }],  /* 10px */
+        'xs': ['0.75rem', { lineHeight: '1.4' }],    /* 12px */
+        'sm': ['0.875rem', { lineHeight: '1.4' }],   /* 14px */
+        'base': ['1rem', { lineHeight: '1.4' }],     /* 106px body */
+        '18': ['1.125rem', { lineHeight: '1.4' }],
+        '20': ['1.25rem', { lineHeight: '1.4' }], 
+        '24': ['1.5rem', { lineHeight: '1.4' }], 
+        '28': ['1.75rem', { lineHeight: '1.4' }],
+        '32': ['2rem', { lineHeight: '1.4' }],   
+        '36': ['2.25rem', { lineHeight: '1.4' }],
+        '40': ['2.5rem', { lineHeight: '1.4' }], 
+        '48': ['3rem', { lineHeight: '1.4' }], 
+        '56': ['3.5rem', { lineHeight: '1.4' }], 
+        '64': ['4rem', { lineHeight: '1.4' }],
       },
       colors: {
         // whiteFull: "#ffffff",

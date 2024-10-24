@@ -53,8 +53,13 @@ export default function Page() {
       <Banner>
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
-          <BannerDescription className="h-full text-balance">
+          <BannerDescription className="h-full text-balance flex flex-col gap-2">
             {t("front.description")}
+              <Button asChild variant="link" className={"w-fit text-white"}>
+                <Link rel="noopener noreferrer" target="_blank" href={"https://ging.github.io/boiler/documentation/"}>
+                  {t("front.doc-button")}
+                </Link>
+            </Button>
           </BannerDescription>
           <Divider />
           <Button
@@ -68,7 +73,7 @@ export default function Page() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-        <Image
+        <Image className={"hidden md:flex"}
           src="placeholder.jpg"
           alt="Descripción de la imagen"
           fit="cover"

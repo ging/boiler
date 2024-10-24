@@ -79,27 +79,15 @@ export default function About() {
             <CardTitle level="h4">{t("about.Goals.Goal3.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal3.GoalBody")}</CardDescription>
           </CustomCard>
-
-          <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
-          <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
-            <FigmaLogoIcon className="m-auto h-7 w-7  text-primary"/>
-            </div>
-            {/* <span className="divider_auto" /> */}
-            <CardTitle level="h4">Título de la card</CardTitle>
-            <CardDescription>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto.
-            </CardDescription>
-          </CustomCard>
         </div>
       </section>
 
-      <section className="subprojects standard_padding-y bg-secondary-300">
-        <Heading level="h3" className="text-left standard_margin-x mb-4 ">
+      <section className="standard_padding-y px-16 bg-secondary-300">
+        <Heading level="h3">
           {t("about.Columns.sectionTitle")}
         </Heading>
-        <div className="flex flex-col sm:flex-row subprojects_container gap-0 sm:gap-16">
-          <div className="standard_margin-l pb-6 sm:pb-0 subproject text-ffdGreen-300 basis-6/12  border-2 sm:border-4 border-solid border-transparent border-t-ffdGreen-400">
+        <div className="flex flex-col  sm:flex-row sm:justify-between gap-0 sm:gap-16">
+          <article className="basis-1/2">
             <Heading level="h5" className="mb-1">
               {t("about.Columns.Column1.Title")}
             </Heading>
@@ -116,9 +104,9 @@ export default function About() {
                 <span>{t("about.Columns.Column1.Button")}</span>
               </Link>
             </Button>
-          </div>
+          </article>
 
-          <div className="standard_margin-r subproject text-ffdBlue-300 basis-6/12  border-2 sm:border-4 border-solid border-transparent border-t-ffdBlue-300">
+          <article className="basis-1/2">
             <Heading level="h5" className="mb-1">
               {t("about.Columns.Column2.Title")}
             </Heading>
@@ -132,7 +120,7 @@ export default function About() {
                 <span>{t("about.Columns.Column2.Button")}</span>
               </Link>
             </Button>
-          </div>
+          </article>
         </div>
       </section>
 
