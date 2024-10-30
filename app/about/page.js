@@ -19,6 +19,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/customCard";
+import Text from "@/components/ui/Text";
 
 export default function About() {
   // const [projects, setProjects] = useState(myprojectCards);
@@ -38,7 +39,7 @@ export default function About() {
             {t("about.Intro.sectionTitle")}
           </Heading>
           <div className="flex flex-col md:flex-row gap-4 lg:gap-12 items-start">
-            <p className="basis-3/4">{t("about.Intro.sectionBody")}</p>
+            <Text className="basis-3/4">{t("about.Intro.sectionBody")}</Text>
             <Heading
               level="highlight"
               className="basis-1/4 font-semibold mt-4 md:mt-0 text-primary"
@@ -82,7 +83,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="standard_padding-y px-16 bg-secondary-300">
+      <section className="standard_padding px-16 bg-secondary-300">
         <Heading level="h3">
           {t("about.Columns.sectionTitle")}
         </Heading>

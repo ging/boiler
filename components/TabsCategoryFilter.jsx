@@ -32,12 +32,12 @@ export default function TabsCategoryFilter({ cards, onFilter }) {
   const classes = (category) => clsx([
     "font-medium inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-base text-white ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
     selectedCategory === category
-      ? "bg-primary-500" // Estilos para la categoría seleccionada
-      : "bg-primary-300 hover:bg-primary-400/75", // Estilos para las categorías no seleccionadas
+      ? "bg-primary-700" // Estilos para la categoría seleccionada
+      : "bg-primary-400 hover:bg-primary-600/75", // Estilos para las categorías no seleccionadas
   ]);
 
   return (
-    <div className="bg-primary-200 inline-flex items-center justify-center rounded-lg p-1 text-muted-foreground gap-1.5">
+    <div className="bg-primary-300/60 inline-flex items-center justify-center rounded-lg p-1 text-muted-foreground gap-1.5">
       {categories.map((category, index) => (
         <button
           key={index}

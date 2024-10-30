@@ -8,7 +8,9 @@ import Text from "@/components/ui/Text";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { MobileIcon } from "@radix-ui/react-icons";
 import { SewingPinIcon } from "@radix-ui/react-icons";
-import { FaceIcon } from "@radix-ui/react-icons";
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 
 export default function Contact(props) {
   const { t, i18n } = useTranslation();
@@ -18,7 +20,7 @@ export default function Contact(props) {
       {/* <Header route={"/about"} /> */}
 
       <main className="standard_padding ">
-        <div className="banner py-8">
+        <div className="banner pb-8">
           <Heading level="h2">
             {t("contact.title")}
           </Heading> 
@@ -33,7 +35,7 @@ export default function Contact(props) {
               <li className="text-center min-h-40 shadow-md px-3 py-6 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
-                  <EnvelopeClosedIcon className=" h-7 w-7 text-primary" />
+                  <MailOutlinedIcon className=" h-7 w-7 text-primary" />
                   </span>
                   <div>
                   <Heading level="h5">
@@ -46,7 +48,7 @@ export default function Contact(props) {
               <li className="text-center min-h-40 shadow-md px-3 py-6 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
-                  <MobileIcon className=" h-7 w-7 text-primary" />
+                  <LocalPhoneOutlinedIcon className=" h-7 w-7 text-primary" />
                   </span>
                   <div>
                   <Heading level="h5">
@@ -59,7 +61,7 @@ export default function Contact(props) {
               <li className=" text-center min-h-40 shadow-md px-3 py-6 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
-                  <SewingPinIcon className=" h-7 w-7 text-primary" />
+                  <LocationOnOutlinedIcon className=" h-7 w-7 text-primary" />
                   </span>
                   <div>
                   <Heading level="h5">

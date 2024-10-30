@@ -24,19 +24,19 @@ export const en = {
         "sectionHomeTitle": "A collaborative project between UC3M and UPM",
         "sectionHomeBody": "The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions. Finally, the PI1 for the UPM subproject was part of UC3M team until a few months ago, with multipleshared projects and papers published with both PIs from UC3M, many of them related to the topics of this project. This will greatly facilitate the alignment of both subprojects and effective coordination.",
         "sectionHomeSubtitle": "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
-        "Goals": {
-            "sectionTitle": "Goals",
-            "Goal1": {
-                "GoalTitle": "Trust as commitment",
-                "GoalBody": "Innovaciones en conectividad, seguridad y operaciones autónomas.",
+        "ResearchLines": {
+            "sectionTitle": "Research lines",
+            "ResearchLine1": {
+                "ResearchLineTitle": "Research line 1",
+                "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
             },
-            "Goal2": {
-                "GoalTitle": "Exploring data space",
-                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+            "ResearchLine2": {
+                "ResearchLineTitle": "Research line 2",
+                "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
             },
-            "Goal3": {
-                "GoalTitle": "Joining data efficiently",
-                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+            "ResearchLine3": {
+                "ResearchLineTitle": "Research line 3",
+                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
         },
     },

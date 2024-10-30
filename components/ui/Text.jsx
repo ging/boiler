@@ -32,9 +32,9 @@ const Text = ({ type = "p", children, className }) => {
     "font-body",
     {/*"text-balance"*/},
     {
-      "text-base max-w-[75ch] text-pretty": type === "p",
+      "text-base max-w-[75ch] xl:max-w-[83ch] 2xl:max-w-[90ch] text-pretty": type === "p",
       "text-sm": type === "small",
-      "text-base max-w-[66ch]": type === "short-p",
+      "text-base max-w-[66ch] xl:max-w-[71ch] 2xl:max-w-[83ch]": type === "short-p",
     },
     className
   ])

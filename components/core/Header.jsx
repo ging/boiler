@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 
 import clsx from "clsx";
-import LangSwitcher from "./../LangSwitcher";
+import LangSwitcher from "@/components/LangSwitcher";
 import { activeRoutes } from "@/constants/routes";
 
 // icons

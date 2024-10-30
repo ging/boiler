@@ -58,7 +58,7 @@ const Team = (props) => {
 
   return (
     <main className={"team page_" + currentLang}>
-      <main className="standard_margin">
+      <main className="padding_home">
         <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
           {t("team.title")}
         </Heading>

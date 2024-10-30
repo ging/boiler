@@ -14,7 +14,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "narrow_padding  md:min-h-[90dvh]",
+      "padding_home md:min-h-[90dvh]",
       "text-snow",
       "bg-main bg-cover bg-center",
       "flex gap-8 justify-around items-center",

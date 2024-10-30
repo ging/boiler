@@ -17,7 +17,7 @@ export const es = {
         "title": "Boilerplate del GING",
         "description": "Plantilla personalizable de sitios web para grupos de investigación y otros proyectos. Puedes consultar la documentación en el enlace de abajo para empezar a usarla.",
         "doc-button": "Documentación",
-        "action-button": "Documentación (cambiar)",
+        "action-button": "Sobre nosotros",
         "section1Title": "Sobre el proyecto",
         "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
         "section1Subtitle": "Principios del proyecto",
@@ -26,19 +26,19 @@ export const es = {
         "sectionHomeTitle": "A collaborative project between UC3M and UPM",
         "sectionHomeBody": "The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions. Finally, the PI1 for the UPM subproject was part of UC3M team until a few months ago, with multipleshared projects and papers published with both PIs from UC3M, many of them related to the topics of this project. This will greatly facilitate the alignment of both subprojects and effective coordination.",
         "sectionHomeSubtitle": "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
-        "Goals": {
-            "sectionTitle": "Goals",
-            "Goal1": {
-                "GoalTitle": "Confianza como compromiso",
-                "GoalBody": "",
+        "ResearchLines": {
+            "sectionTitle": "Líneas de investigación",
+            "ResearchLine1": {
+                "ResearchLineTitle": "Línea de investigación 1",
+                "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
             },
-            "Goal2": {
-                "GoalTitle": "Explorando el espacio de datos",
-                "GoalBody": "",
+            "ResearchLine2": {
+                "ResearchLineTitle": "Línea de investigación 2",
+                "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
             },
-            "Goal3": {
-                "GoalTitle": "Uniendo datos de manera eficiente",
-                "GoalBody": "",
+            "ResearchLine3": {
+                "ResearchLineTitle": "Línea de investigación 3",
+                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
         },
     },
