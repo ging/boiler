@@ -10,7 +10,8 @@ import LangSwitcher from "@/components/LangSwitcher";
 import { activeRoutes } from "@/constants/routes";
 
 // icons
-import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 export default function Header(props) {
   const [state, setState] = useState({ open: false });
@@ -82,12 +83,12 @@ export default function Header(props) {
         {/* menu icons */}
         <div className="block md:hidden">
           {!state.open ? (
-            <HamburgerMenuIcon
+            <MenuOutlinedIcon
               className="w-6 h-6"
               onClick={() => setState({ open: !state.open })}
             />
           ) : (
-            <Cross1Icon
+            <CloseOutlinedIcon
               className="w-6 h-6"
               onClick={() => setState({ open: !state.open })}
             />

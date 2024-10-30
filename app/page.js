@@ -10,7 +10,7 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
-import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from "@/components/ui/image";
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
@@ -72,7 +72,7 @@ export default function Page() {
               radius: "rounded_sm",
             })}
           >
-            {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
+            {t("front.action-button")} <ArrowForwardIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
         <Image className={"hidden md:flex"}

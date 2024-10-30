@@ -4,10 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import { MobileIcon } from "@radix-ui/react-icons";
-import { SewingPinIcon } from "@radix-ui/react-icons";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';

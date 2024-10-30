@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { activeRoutes } from "@/constants/routes";
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Image from "../ui/image";
 import Text from "../ui/Text";
 import Link from 'next/link';
@@ -34,7 +34,7 @@ export default function Footer(props) {
         />
         <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0">
           <div className="flex flex-row">
-          <EnvelopeClosedIcon className="mr-2 mt-1" />
+          <EmailOutlinedIcon className="mr-2 mt-1" />
           <Text className=" text-[14px] flex gap-1">
             <b>{t("footer.email")} </b>
           </Text>

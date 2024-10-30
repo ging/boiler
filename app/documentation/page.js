@@ -12,7 +12,6 @@ import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
 import TabsCategoryFilter from "@/components/TabsCategoryFilter";
-import { FaceIcon } from "@radix-ui/react-icons";
 
 // Array de datos (cards)
 import { projects } from "@/constants/projects";

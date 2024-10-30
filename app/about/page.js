@@ -4,13 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { projects } from "@/constants/projects.js";
 import { useTranslation } from "react-i18next";
-import {
-  FaceIcon,
-  FigmaLogoIcon,
-  HeartIcon,
-  Pencil2Icon,
-  ScissorsIcon,
-} from "@radix-ui/react-icons";
+import ElectricCarIcon from '@mui/icons-material/ElectricCar';
+import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
+import PolylineIcon from '@mui/icons-material/Polyline';
 import Heading from "@/components/ui/Heading";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import {
@@ -59,7 +55,7 @@ export default function About() {
         <div className=" flex items-center sm:items-strech sm:justify-stretch flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-20">
         <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
              <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
-             <FigmaLogoIcon className="m-auto h-7 w-7  text-primary" />
+             <ElectricCarIcon className="m-auto h-7 w-7  text-primary" />
              </div>
             <CardTitle level="h4">{t("about.Goals.Goal1.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal1.GoalBody")}</CardDescription>
@@ -67,7 +63,7 @@ export default function About() {
 
           <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
           <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
-              <ScissorsIcon className="m-auto h-7 w-7  text-primary"/>
+              <ImportantDevicesIcon className="m-auto h-7 w-7  text-primary"/>
               </div>
             <CardTitle level="h4">{t("about.Goals.Goal2.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal2.GoalBody")}</CardDescription>
@@ -75,7 +71,7 @@ export default function About() {
 
           <CustomCard className="h-full w-full flex flex-col justify-start gap-4 xs:w-3/4 sm:w-full  shadow-md shadow-primary/15 rounded text-center padding_card_highlight">
           <div className="mx-auto h-12 w-12 rounded-full flex bg-primary-300 justify-center items-center"> 
-              <HeartIcon className="m-auto h-7 w-7  text-primary" />
+              <PolylineIcon className="m-auto h-7 w-7  text-primary" />
               </div>
             <CardTitle level="h4">{t("about.Goals.Goal3.GoalTitle")}</CardTitle>
             <CardDescription>{t("about.Goals.Goal3.GoalBody")}</CardDescription>

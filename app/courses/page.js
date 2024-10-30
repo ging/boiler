@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { mycourses } from "@/constants/courses.js";
 import { useTranslation } from 'react-i18next';
-import { FaceIcon } from "@radix-ui/react-icons";
 import { Card, CardVariants } from "@/components/core/Cards";
 
 

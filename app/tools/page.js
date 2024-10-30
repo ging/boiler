@@ -8,7 +8,7 @@ import image from "next/image";
 import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
 import { useTranslation } from "react-i18next";
-import { FaceIcon } from "@radix-ui/react-icons";
+import FaceIcon from '@mui/icons-material/Face';
 
 export default function Tools(props) {
   const { t, i18n } = useTranslation();
