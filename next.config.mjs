@@ -17,14 +17,14 @@ const nextConfig = {
    *
    * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
    */
-  output: "export",
+   output: "export",
 
   /**
    * Set base path. This is the slug of your GitHub repository.
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: isProd ? '/boiler' : '',
+   basePath: isProd ? '' : '',
 
   /**
    * Set asset prefix. This is the URL prefix for assets.
@@ -47,8 +47,8 @@ const nextConfig = {
    * Environment variables
    */
   env: {
-    PUBLIC_URL: isProd ? "/boiler" : "",
-    BASE_PATH: isProd ? "/boiler" : ""
+    PUBLIC_URL: isProd ? "" : "",
+    BASE_PATH: isProd ? "" : ""
   }
 };
 

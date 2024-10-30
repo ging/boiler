@@ -25,10 +25,10 @@ module.exports = {
         "main": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
-        'xs': ['0.5rem', { lineHeight: '1.4' }],
-        'sm': ['0.75rem', { lineHeight: '1.4' }],
-        'base': ['1rem', { lineHeight: '1.4' }], // body
-
+        'xs': ['0.75rem', { lineHeight: '1.5' }],
+        'sm': ['0.85rem', { lineHeight: '1.5' }],
+        'base': ['1rem', { lineHeight: '1.5' }],
+        'p': ['1rem', { lineHeight: '1.5' }], // body
         // con Hs creo que es mejor la verdad y así reservamos los tamañosde tw por si acaso
         'h1': ['3rem', { lineHeight: '1.2' }],
         'h2': ['2.5rem', { lineHeight: '1.2' }],
