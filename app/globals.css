@@ -30,12 +30,7 @@
 .standard_margin-y {
     @apply my-6 sm:my-6 md:my-8 lg:my-12 
 }
-.standard_margin-l {
-    @apply mx-6 mt-2 sm:ml-8 sm:mr-0 md:ml-14 lg:ml-24 xl:ml-44 2xl:ml-60
-}
-.standard_margin-r {
-    @apply mx-6 mt-2 sm:mr-8 sm:ml-0 md:mr-14 lg:mr-24 xl:mr-44 2xl:mr-60
-}
+
 
 /*PADDINGS*/
 .standard_padding {

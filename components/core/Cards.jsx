@@ -14,6 +14,7 @@ import { Button } from "../ui/button";
 import Image from "../ui/image";
 import {
   CustomCard,
+  CardBody,
   CardContent,
   CardTitle,
   CardSubtitle,
@@ -50,11 +51,7 @@ const tagContainerClasses = cn(
   "mt-6 w-full flex flex-wrap gap-2 justify-start"
 );
 
-/**
- * Se puede integrar si cambiamos el modelo de datos del json por array
- * @param {String} tags
- * @returns string array
- */
+
 const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
@@ -143,12 +140,16 @@ const Card = React.forwardRef(
             {category}
           </Badge>
         </CardHeader>
-        <CardContent className="h-full">
-          <CardTitle level="h3">{title}</CardTitle>
-          <CardSubtitle level="h6">{subtitle}</CardSubtitle>
-          {description && <CardDescription>{description}</CardDescription>}
-          <div className={tagContainerClasses}>{renderTags(tags)}</div>
-        </CardContent>
+        <CardBody>
+          <CardContent>
+            <CardTitle level="h3">{title}</CardTitle>
+            <CardSubtitle level="h6">{subtitle}</CardSubtitle>
+            {description && <CardDescription>{description}</CardDescription>}
+          </CardContent>
+          <CardContent>
+            <div className={tagContainerClasses}>{renderTags(tags)}</div>
+          </CardContent>
+        </CardBody>
         <CardFooter className="justify-center">
           <Button href={route}>Ver proyecto</Button>{" "}
           {/**revisar el href que no funciona el link */}
@@ -161,9 +162,9 @@ const Card = React.forwardRef(
       <CustomCard
         className={cn(CardVariants({ direction, className }))}
         style={{
-          backgroundImage: "url('assets/fondos/background_image.png')", 
+          backgroundImage: "url('assets/fondos/background_image.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center", 
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -185,12 +186,14 @@ const Card = React.forwardRef(
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
           /> */}
-        <CardContent>
-          <CardTitle>{title}</CardTitle>
-          <CardSubtitle level="h6">{subtitle}</CardSubtitle>
-          <CardDescription>{description}</CardDescription>
-          {/* <div className={tagContainerClasses}>{renderTags(tags)}</div> */}
-        </CardContent>
+        <CardBody>
+          <CardContent>
+            <CardTitle>{title}</CardTitle>
+            <CardSubtitle level="h6">{subtitle}</CardSubtitle>
+            <CardDescription>{description}</CardDescription>
+            {/* <div className={tagContainerClasses}>{renderTags(tags)}</div> */}
+          </CardContent>
+        </CardBody>
       </CustomCard>
     );
 
@@ -207,12 +210,14 @@ const Card = React.forwardRef(
           </Badge>
           {translateCategory(category, currentLang)}
         </CardHeader>
-        <CardContent className="gap-1">
-          <CardTitle level="h3">
-            <i>{title}</i>
-          </CardTitle>
-          <Text level="p">{author}</Text>
-        </CardContent>
+        <CardBody>
+          <CardContent className="gap-1">
+            <CardTitle level="h5">
+              <i>{title}</i>
+            </CardTitle>
+            <Text level="p">{author}</Text>
+          </CardContent>
+        </CardBody>
         <CardFooter>
           {doi ? (
             <Button asChild variant="" radius="rounded_md">
@@ -246,7 +251,7 @@ const Card = React.forwardRef(
           />
         )}
         {(name || description || email) && (
-          <CardContent className="w-full justify-start items-center mb-auto">
+          <CardContent className="items-center mb-auto">
             <CardTitle level="h5" className={"text-inherit text-center"}>
               {name}
             </CardTitle>
@@ -278,10 +283,12 @@ const Card = React.forwardRef(
             fit="contain"
           />
         )}
-        <CardContent>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
-        </CardContent>
+        <CardBody>
+          <CardContent>
+            <CardTitle>{title}</CardTitle>
+            <CardDescription>{description}</CardDescription>
+          </CardContent>
+        </CardBody>
         <CardFooter>
           {github && (
             <Button asChild variant="link">

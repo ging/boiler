@@ -34,13 +34,9 @@ export default function RootLayout({ children }) {
     <html className={` ${sourceSans.variable} ${inter.variable} `}>
       <title>Boiler</title>
       <body className="bg-background">
-        <div>
-          <Header route={"/"} />
-        </div>
+        <Header route={"/"} />
         {children}
-        <div>
-           <Footer /> 
-        </div>
+        <Footer />
       </body>
     </html>
   );

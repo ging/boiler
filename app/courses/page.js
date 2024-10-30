@@ -28,9 +28,10 @@ export default function Courses() {
             <p>{t('courses.desc')}</p>
           </div>
           <div className=" grid gap-4 md:grid-cols-2 sm:grid-cols-1">
-            {courses.map(({ date, edition, title, description, route }) => {
+            {courses.map(({ date, edition, title, description, route }, key) => {
               return (
                 <Card
+                  key={key}
                   cardType={"course"}
                   date={date}
                   title={title}

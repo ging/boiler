@@ -15,22 +15,16 @@ import TabsCategoryFilter from "@/components/TabsCategoryFilter";
 import { FaceIcon } from "@radix-ui/react-icons";
 
  //Array de datos (cards)
+import  courses  from "@/constants/placeholder-constants/courses";
+import { publications } from "@/constants/publications";
 import { projects } from "@/constants/projects";
-import { mypublications } from "@/constants/publications";
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
  //  Funcion y array de categorias de Tabs
-  const [filteredCards, setFilteredCards] = useState(projects);
-
-  // Tus categorías para el filtro
-  const categories = ["all", "ind", "erg", "other"];
+  const [filteredCards, setFilteredCards] = useState(publications);
 
   return ( 
      <main className={"page_" + currentLang + " standard_margin"}>
@@ -316,27 +310,27 @@ export default function DesignSystem(props) {
 
          {/* Pasa las categorías y las tarjetas al componente Tabs */} 
           <TabsCategoryFilter
-           categories={categories}
-           cards={projects}
+           cards={publications}
            onFilter={setFilteredCards}
          /> 
 
           <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
            {filteredCards.map(
              (
-               { date, route, title, center, description, tags, category },
+               { date, title, author, doi, center, description, category },
                index
              ) => (
                <Card
                  key={index}
-                 cardType={"project"}
+                 cardType={"publication"}
                  date={date}
+                 author={author}
                  category={category}
                  title={title}
                  subtitle={center}
                  description={description}
-                 tags={tags}
-                 route={route}
+                //  tags={tags}
+                 doi={doi}
                ></Card>
              )
            )}

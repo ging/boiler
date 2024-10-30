@@ -16,7 +16,7 @@ import { FaceIcon } from "@radix-ui/react-icons";
 
 // Array de datos (cards)
 import { projects } from "@/constants/projects";
-import { mypublications } from "@/constants/publications";
+import { publications } from "@/constants/publications";
 
 
 export default function Documentation(props) {

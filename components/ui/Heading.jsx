@@ -43,13 +43,13 @@ const Heading = ({ level = "h1", children, className }) => {
   const classes = clsx([
     "text-primary-900 font-title font-bold text-pretty",
     {
-      "text-h1 2xl:text-5xl mb-6": level === "h1", // Aplicar "adasd" si el nivel es h1
-      "text-h2 2xl:text-4xl mb-4": level === "h2",
-      "text-h3 2xl:text-3xl mb-4": level === "h3",
-      "text-h4 2xl:text-2xl mb-2": level === "h4",
-      "text-h5 2xl:text-xl mb-2": level === "h5",
-      "text-h6 font-medium uppercase mb-2": level === "h6",
-      "text-lg 2xl:text-h5 2xl:text-xl font-bold mb-2": level === "highlight",
+      "text-40 2xl:text-5xl mb-6": level === "h1", // Aplicar "adasd" si el nivel es h1
+      "text-36 2xl:text-3xl mb-4": level === "h2",
+      "text-32 2xl:text-2xl mb-4": level === "h3",
+      "text-28 2xl:text-xl mb-2": level === "h4",
+      "text-24 2xl:text-lg mb-2": level === "h5",
+      "text-base font-medium uppercase mb-2": level === "h6",
+
     },
     className
   ])

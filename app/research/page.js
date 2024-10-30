@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Filters from "@/components/ResearchFilter";
 import Link from "next/link";
-import { mypublications } from "@/constants/publications";
+import { publications } from "@/constants/publications";
 
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
@@ -21,7 +21,7 @@ export default function Research() {
   //   console.log("false, language false")
   // }
   const [state, setState] = useState({
-    items: mypublications,
+    items: publications,
     search: "",
     year: undefined,
     category: undefined,
@@ -36,7 +36,7 @@ export default function Research() {
   const { items, search, year, category, papersToShow } = state;
 
   // creado array de categorías de publications 
-  const categories = [...new Set(mypublications.map(publication => publication.category))];
+  const categories = [...new Set(publications.map(publication => publication.category))];
   categories.push("all")
 
   console.log(categories)
