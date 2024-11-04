@@ -26,15 +26,20 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 		//get author names from entry, separated by comma and adding "and" before the last one
 		let author = entry.author.map((a, i) => {
 			if (i === entry.author.length - 1) {
+				if (entry.author.length === 1) {
+					return a.given + " " + a.family
+				} 
 				return "and " + a.given + " " + a.family;
-			}
+			} 
 			return a.given + " " + a.family;
+			
 		}).join(", ");		
+	
 
 	    return `{  
 	    		${(issued && issued['date-parts']) ? ('"date": ' + '[' + issued['date-parts'] + "]," ): "" }
 	    		${ DOI ? ('"doi": "' + DOI + '",'): "" }
-	    		${ type ? ('"type": "' + type + '",'): "" }
+	    		${ type ? ('"category": "' + type + '",'): "" }
 				${ type ? ('"author": "' + author + '",'): "" }
 				${ type ? ('"title": "' + title + '",'): "" }
 				${ type ? ('"journal": "' + journal + '",'): "" }

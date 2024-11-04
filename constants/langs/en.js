@@ -102,7 +102,8 @@ export const en = {
             "fieldOpt2":"Conference proceedings",
             "fieldOpt3":"Book",
             "fieldOpt4":"Chapter",
-            "fieldOpt5":"All",
+            "fieldOpt5":"Document",
+            "fieldOpt6":"All",
             "text":"Results"
         },
         "button": "Read publication", 

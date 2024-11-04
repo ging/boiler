@@ -206,7 +206,8 @@ const Card = React.forwardRef(
       >
         <CardHeader>
           <Badge variant="outline" size="lg">
-            {date}
+            {date && date[0]}
+            
           </Badge>
           {translateCategory(category, currentLang)}
         </CardHeader>
@@ -229,9 +230,13 @@ const Card = React.forwardRef(
             </Button>
           ) : null}
         </CardFooter>
-      </CustomCard>
-    );
 
+          {console.log(date && date[0])}
+
+      </CustomCard>
+      
+    );
+  
     // TEAM - ok
     const teamCard = (
       <CustomCard

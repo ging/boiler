@@ -104,7 +104,8 @@ export const es = {
             "fieldOpt2":"Actas de congreso",
             "fieldOpt3":"Libros",
             "fieldOpt4":"Capítulos",
-            "fieldOpt5":"Todo",
+            "fieldOpt5":"Documento",
+            "fieldOpt6":"Todo",
             "text":"Resultados"
         },
         "button": "Leer publicación",
