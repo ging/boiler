@@ -6,7 +6,9 @@ export const en = {
         "item4":"Research",
         "item5":"Contact",
         "item6":"Design system",
-        "item7":"Documentation"
+        "item7":"Documentation",
+        "item8":"Courses",
+        "item9":"Tools"
     },
     "header": {
         "publicationstab": "Publications",
@@ -81,7 +83,7 @@ export const en = {
             "sectionBody": "Porttitor ultricies magnis tincidunt nostra odio id. In pharetra efficitur, penatibus nascetur imperdiet mus torquent. Congue mauris euismod lorem vehicula tellus fringilla condimentum tincidunt diam. At vel semper mollis; semper vivamus sociosqu ex. Ultrices nunc commodo mi nascetur egestas neque potenti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos inceptos suspendisse cubilia urna? Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
         }
     },
-    "publications": {
+    "research": {
         "title": "Publications",
         "description": "Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
         "publicationCards": {
@@ -115,15 +117,43 @@ export const en = {
         "tag": ". edition",
         "button": "Go to course",
     },
-    "projects": {
-        "title": "Projects",
-        "filterTitle1":"All",
-        "filterTitle2":"Projects - individual",
-        "filterTitle3":"Educational Research Group (GIE/ERG)",
-        "filterTitle4":"Other",
-        "button":"Details",
-        //traducir tags?  cuando estén
-    },
+    projects: {
+        title: "Projects",
+        description:
+          "In this section, you can explore the projects we are currently working on as well as past projects. If you wish, you can filter the projects by their research lines or access specific project pages.",
+        filterTitle1: "All",
+        filterTitle2: "Projects - individual",
+        filterTitle3: "Educational Research Group (GIE/ERG)",
+        filterTitle4: "Other",
+        button: "Details",
+        researchLines: {
+          data: "Data",
+          ai: "Artificial Intelligence ",
+          "e-learning": "E-learning",
+          videoconference: "Video Conference",
+          computing: "Dependable Computing",
+          other: "Other",
+          all: "All",
+        },
+        filter: {
+          fieldTitle1: "Name search",
+          fieldTitle2: "Project type",
+          all: "All",
+          "national-project": "National Project",
+          "european-project": "European Project",
+          "private-project": "Private Project",
+        },
+        card: {
+          toggleMore: "See more",
+          toggleLess: "See less",
+          button: "Related papers",
+        },
+        type: {
+          "european-project": "European Project",
+          "national-project": "National Project",
+          "private-project": "Private Project",
+        },
+      },
     "team": {
         "title": "Team",
         "professorCards": {

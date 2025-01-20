@@ -8,7 +8,9 @@ export const es = {
         "item4":"Publicaciones",
         "item5":"Contacto",
         "item6":"Sistema de diseño",
-        "item7":"Documentación"
+        "item7":"Documentación",
+        "item8":"Cursos",
+        "item9":"Herramientas"
     },
     "header": {
         "publicationstab": "Publicaciones",
@@ -84,9 +86,9 @@ export const es = {
             
         }
     },
-    "publications": {
+    "research": {
         "title": "Publicaciones",
-        "description": "Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
+        "description": "Esta sección recopila las publicaciones del GING relacionadas con nuestras líneas de investigación. Puedes filtrar las publicaciones por texto, fecha, línea de investigación, o tipo de publicación.",
         "publicationCards": {
             "categories": {
                 "article-journal": "Artículo de revista",
@@ -117,14 +119,37 @@ export const es = {
         "tag": "º edición",
         "button": "Ir al curso",
     },
-    "projects": {
-        "title": "Proyectos",
-        "filterTitle1":"Todos",
-        "filterTitle2":"Proyectos - individual",
-        "filterTitle3":"Grupo de investigación educativa (GIE)",
-        "filterTitle4":"Otros",
-        "button":"Detalles", 
-
+    projects: {
+        title: "Proyectos",
+        description :"En esta sección puedes explorar los proyectos en los que estamos trabajando actualmente y proyectos pasados. Si lo deseas, puedes filtrar los proyectos según sus líneas de investigación o acceder a las páginas específicas de los proyectos.",
+        button: "Detalles",
+        researchLines: {
+          "data": "Datos",
+          "ai": "Inteligencia Artificial",
+          "e-learning": "E-learning",
+          "videoconference": "Videoconferencia",
+          "computing": "Computación Fiable",
+          other: "Otros",
+          all: "Todo",
+        },
+        "filter": {
+          "fieldTitle1":"Búsqueda por nombre",
+          "fieldTitle2":"Tipo de proyecto",
+          "all":"Todo",
+          "national-project":"Proyecto nacional",
+          "european-project":"Proyecto europeo",
+          "private-project":"Proyecto privado",
+      },
+        "card": {
+          "toggleMore": "Ver más",
+          "toggleLess": "Ver menos",
+          "button": "Publicaciones relacionadas"
+      },
+      "type": {
+        "european-project": "Proyecto europeo",
+        "national-project": "Proyecto nacional",
+        "private-project": "Proyecto privado"
+        }
     },
     "team": {
         "title": "Equipo",

@@ -27,7 +27,7 @@ export default function Filters({ search, changeSearch, year, changeYear, items,
         <Badge className="research_results">
           <p className="">
             {" "}
-            {t("publications.filter.text")}
+            {t("research.filter.text")}
             <b> {results} </b>{" "}
           </p>
         </Badge>

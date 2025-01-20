@@ -11,7 +11,7 @@ export default function FilterText( {search, changeSearch} ) {
   const { t } = useTranslation();
   return (
     <div className="filter flex flex-wrap md:w-1/2">
-    <Label htmlFor="search">{t("publications.filter.fieldTitle1")}</Label>
+    <Label htmlFor="search">{t("research.filter.fieldTitle1")}</Label>
     <Input
       className="w-full"
       key={" "}

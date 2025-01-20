@@ -3,7 +3,7 @@ export const mytools = [
     img: "assets/img/logos/sgame.svg",
     route: "https://sgame.etsisi.upm.es/",
     title: "SGAME",
-    description: "descripciónde la herramienta",
+    description: "descripción de la herramienta",
     translationKey: "tools.toolCards.description.1",
     github: "https://github.com/CyberAula/sgame_platform",
     key:"1",

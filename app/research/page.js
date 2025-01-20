@@ -92,9 +92,9 @@ export default function Research() {
   return (
     <div className={"research page_" + currentLang}>
       <div className="standard_margin" id="banner-publications">
-        <Heading level="h2">{t("publications.title")}</Heading>
+        <Heading level="h2">{t("research.title")}</Heading>
         <Text type="p">
-          {t("publications.description")}
+          {t("research.description")}
         </Text>
       </div>
       <main className="research">
@@ -146,7 +146,7 @@ export default function Research() {
                 }) + " w-fit mt-4 my-auto"
               }
             >
-              {t("publications.button2")}
+              {t("research.button2")}
             </Button>
           )}
         </div>

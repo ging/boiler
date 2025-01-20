@@ -16,7 +16,7 @@ export default function FilterCategory( {category, changeCategory, categories } 
   const { t } = useTranslation();
   return (
     <div className="container_select_label w-1/2 lg:w-full">
-    <Label htmlFor="search">{t("publications.filter.fieldTitle2")}</Label>
+    <Label htmlFor="search">{t("research.filter.fieldTitle2")}</Label>
           <Select
             className="filter flex flex-col"
             onValueChange={(value) =>
@@ -35,7 +35,7 @@ export default function FilterCategory( {category, changeCategory, categories } 
             <SelectContent id="publication" name="publication">
               {categories.map((category, index) => (
               <SelectItem key={index} value={category}>
-                {t(`publications.filter.fieldOpt${index + 1}`)}
+                {t(`research.filter.fieldOpt${index + 1}`)}
               </SelectItem>
               ))}
             </SelectContent>
